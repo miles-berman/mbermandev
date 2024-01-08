@@ -1,4 +1,4 @@
-# [Miles Berman] Portfolio Website
+# Miles Berman - Portfolio Website
 
 Welcome to the repository for my personal portfolio website. This website serves as a showcase of my projects, skills, and professional journey.
 
