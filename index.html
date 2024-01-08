@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miles Berman - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Welcome to my portfolio website!</p>
-    </header>
-    
-    <section id="contact">
-        <h2>Contact Information</h2>
-        <p>Email: your.email@example.com</p>
-        <p>LinkedIn: [Your LinkedIn Profile]</p>
-        <p>GitHub: [Your GitHub Profile]</p>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">My Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="home" class="main-content">
+        <h1>Miles Berman</h1>
+        <p>Portfolio 2024</p>
     </section>
 
-    <footer>
-        <p>© 2024 Your Name</p>
-    </footer>
+    <section id="portfolio">
+        <h2>My Work</h2>
+
+        <!-- Portfolio Item 1 -->
+        <div class="portfolio-item">
+            <h3><strong>The Report</strong></h3>
+            <p>The Report is a collaborative project I made with some friends. While initially started for a school project, we decided to continue the game further after submitting and see our idea through. My contributions included:</p>
+            <ul>
+                <li>All Music, Sound Effects, & Audio Implementation</li>
+                <li>Art Creation</li>
+                <li>Programming</li>
+            </ul>
+            <iframe src="https://finndepuy.github.io/The-Report/" title="Game Title" width="600" height="400" allowfullscreen style="border:none;"></iframe>
+        </div>
+
+        <!-- Portfolio Item 2 -->
+        <div class="portfolio-item">
+            <h3><strong>City Views</strong></h3>
+            <p>City Views is a personal project I have been working on for quite a while. The idea behind this game was to create an experience where the player has very limited choices for movement and interaction in the world, and is forced to just sit and watch the world around them. I wanted to challenge myslef to create the game from scratch, working on all the music, art, animations, and game mechanics myself. It is a project I am very proud of, and demonstrates a lot of my skills, including:</p>
+            <ul>
+                <li>Algorythmic Music Generation</li>
+                <li>Animation And Art Skills</li>
+                <li>Solo Game Development Skills</li>
+            </ul>
+            <img src="Projects/CityViews/cover.jpg" alt="Project Image" width="600" height="400">
+            <br>
+            <a href="Projects/CityViews/Game.zip" class="download-button" download>Download Project</a>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                I am a Senior at The University of California, Santa Cruz studying Computer Science with a focus in Game Design. As displayed in my portfolio, my interests and skills in programming, music, and art allow me to create well-developed projects in not just video games, but in many other fields as well. 
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <p>Email: mileshb16@gmail.com</p>
+            <!-- Add more contact details here -->
+        </div>
+    </section>
+
+
+<footer>
+    <p>© 2024 Miles Berman</p>
+</footer>
+
 </body>
 </html>
