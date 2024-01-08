@@ -147,15 +147,21 @@ h2 {
         margin-bottom: 10px;
     }
 
-    /* Adjust alignment for smaller screens */
     h2, .portfolio-item h3, .portfolio-item p, .portfolio-item ul {
         text-align: center;
         margin-left: 0;
     }
 
-    /* Adjust padding for the bullet points on smaller screens */
     .portfolio-item ul {
         padding-left: 20px;
+    }
+
+    /* Add responsive media styles */
+    .responsive-media {
+        width: 100%; /* Full width of the screen/container */
+        height: auto; /* Maintain aspect ratio */
+        display: block;
+        margin: 0 auto; /* Center the element */
     }
 }
 
