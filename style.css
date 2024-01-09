@@ -157,6 +157,7 @@ h2 {
 
     /* Add responsive media styles */
     .responsive-media {
+        overflow: hidden;
         width: 100%; /* Full width of the screen/container */
         height: auto; /* Maintain aspect ratio */
         display: block;
