@@ -114,7 +114,6 @@ h2 {
 /* Portfolio item iframe styling */
 .portfolio-item iframe {
     border: none; /* Remove the border */
-    overflow: hidden;  /*Hide all scrollbars */
 }
 
 
@@ -158,7 +157,6 @@ h2 {
 
     /* Add responsive media styles */
     .responsive-media {
-        /*overflow: hidden;*/
         width: 100%; /* Full width of the screen/container */
         height: auto; /* Maintain aspect ratio */
         display: block;
