@@ -114,7 +114,7 @@ h2 {
 /* Portfolio item iframe styling */
 .portfolio-item iframe {
     border: none; /* Remove the border */
-    /*overflow: hidden;  Hide all scrollbars */
+    overflow: hidden;  /*Hide all scrollbars */
 }
 
 
