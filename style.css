@@ -138,6 +138,10 @@ h2 {
 
 /* Responsive design */
 @media (max-width: 600px) {
+    body {
+        overflow: hidden; /* Hide scrollbar on body elements */
+    }
+
     .main-content, .portfolio-item, #about, #contact, nav {
         width: 100%;
     }
