@@ -14,6 +14,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
     <!-- Other tags here -->
+
+    <!-- Script to default to top of page -->
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+            }, 1);
+        };
+    </script>
+
 </head>
 
 <body>
@@ -63,6 +73,20 @@
             <img class="responsive-media" src="Projects/CityViews/cover.jpg" alt="Project Image" width="700" height="500">
             <br>
             <a href="Projects/CityViews/Game.zip" class="download-button" download>Download Project</a>
+        </div>
+
+        <!-- Portfolio Item 3 -->
+        <div class="portfolio-item">
+            <h3><strong>SMPL-HLPR</strong></h3>
+            <p>A python "sampler" to change bit depth, sample rate, and pitch of wav &amp; mp3 files. The app allows users to load audio files (WAV and MP3), and manipulate the audio in real-time. Users can adjust the bit depth, sample rate, and pitch of the audio, and apply these changes on the fly.</p>
+            <ul>
+                <li>Python Programming</li>
+                <li>Audio File Manipulation</li>
+                <li>UI and App Distribuion/li>
+            </ul>
+            <img class="responsive-media" src="Projects/SMPL-HLPR/cover.jpg" alt="Project Image" width="800" height="500">
+            <br>
+            <a href="Projects/SMPL-HLPR/Builds.zip" class="download-button" download>Download Project</a>
         </div>
     </section>
 
