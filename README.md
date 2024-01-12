@@ -26,7 +26,7 @@ For collaboration or inquiries, feel free to reach out via email at mileshb16@gm
 
 ## Acknowledgments
 
-This portfolio is hosted using GitHub Pages and represents my journey through the intersection of technology and creativity.
+This portfolio is hosted using GitHub Pages.
 
 ---
 
