@@ -224,6 +224,27 @@ h2 {
 }
 
 
+.songs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap as needed for spacing between audio players */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+}
+
+.song {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns items to the start of the cross axis */
+}
+
+.song h4 {
+    margin: 0 0 10px 0; /* Adjust spacing as needed */
+}
+
+/* may need responsive media queries to ensure layout works on all devices */
+
+
 /* Contact Content Styling */
 .contact-content {
     text-align: center;
