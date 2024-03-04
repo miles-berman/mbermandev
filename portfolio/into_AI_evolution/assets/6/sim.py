@@ -2,18 +2,10 @@
 
 import random
 
-# 0       
-class ZeroNode:
+# RandNode
+class RandNode:
     def __init__(self, value=0):
-        self.data = value
-
-    def forward(self, value):
-        self.data = value
-
-# 1
-class OneNode:
-    def __init__(self, value=1):
-        self.data = value
+        self.data = random.randint(0, 10) # random value between 0 and 10
 
     def forward(self, value):
         self.data = value
@@ -27,15 +19,6 @@ class InnerNode:
         self.data = value
 
 
-# IntNode
-class RandNode:
-    def __init__(self, value=0):
-        self.data = random.randint(0, 10) # random value between 0 and 10
-
-    def forward(self, value):
-        self.data = value
-
-    
 # Python code for a basic synapse class
 
 class Synapse:
@@ -45,8 +28,7 @@ class Synapse:
         self.target = None
             
 
-
-# Python code for a basic synapse class
+# Python code for a basic organism class
 
 class Organism:
     def __init__(self, nodes=[]):
@@ -55,9 +37,8 @@ class Organism:
 
     def new_brain(self):
         self.nodes.append(InnerNode())
-        self.nodes.append(ZeroNode())
-        self.nodes.append(OneNode())
-        
+        self.nodes.append(RandNode())
+
         self.synapses.append(Synapse())
         self.synapses[-1].source = random.choice(self.nodes)
         self.synapses[-1].target = random.choice(self.nodes)
@@ -68,22 +49,34 @@ class Organism:
             synapse.target.forward(synapse.source.data)
             return synapse.target.data
         
-    def child(self, partner):
+    def mutate(self):
+        for synapse in self.synapses:
+            synapse.weight += random.uniform(-1, 1)
+            synapse.source = random.choice(self.nodes)
+            synapse.target = random.choice(self.nodes)
+
+    def child(self, partner, mutation_rate=0.1):
         child = Organism()
+        child.new_brain()
         for i in range(len(self.synapses)):
-            if random.random() > 0.5:
+            rand = random.random()
+            if rand > 0.5:
                 child.synapses.append(self.synapses[i])
             else:
                 child.synapses.append(partner.synapses[i])
+
+            if rand <= mutation_rate:
+                self.mutate()
+                
         return child
-        
+
+
 
 # Python code for creating our grid
 
 size = 10, 10 # 100 possible cells
 
 world = [[0 for x in range(size[0])] for y in range(size[1])] # initialize world with 0s
-
 
 
 for i in range(10):
@@ -93,5 +86,14 @@ for i in range(10):
         val = creature.think()
         world[i][j] = val
 
+c = Organism()
+c.new_brain
+val = c.think()
 
-print(world)
+d = Organism()
+d.new_brain
+val = d.think()
+
+e = c.child(d)
+
+print(e.think())

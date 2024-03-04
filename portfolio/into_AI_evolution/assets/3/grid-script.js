@@ -92,6 +92,7 @@ class Organism {
 
 const size = [10, 10];
 let world = [];
+let target = 1;
 
 function renderGrid() {
     const gridContainer = document.getElementById('grid');
@@ -101,7 +102,7 @@ function renderGrid() {
         row.forEach(organism => {
             let cell = document.createElement('div');
             let value = organism.think(); // Determine the value for visualization based on think method
-            cell.className = 'cell ' + (value === 1 ? 'one' : 'zero');
+            cell.className = 'cell ' + (value === target ? 'one' : 'zero');
             cell.textContent = value;
             gridContainer.appendChild(cell);
         });

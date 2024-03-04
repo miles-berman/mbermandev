@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Article - Miles Berman</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <!-- Additional styles for AI article -->
+    <link rel="stylesheet" href="assets/ai-article-style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article class="content-area">
+        <h1>Population & Mutations</h1>
+        <section class="article-section">
+            <h2>Child Mutations</h2>
+
+            <p class="intro-text">
+                Mutations are a natural part of the process of evolution. They are the reason that we have such a wide variety of species on our planet. In the context of our AI, mutations
+                can be thought of as a way to introduce new ideas into the population. This is important because it allows us to explore and potentially find a better solution to our problem.
+                The mutations can be thought of as an exploration of the solution space. Without mutations, we would be stuck with the same ideas and would never find better solutions,
+                and we would have to wipe the slate clean and start over. This is why mutations are so important to the process of evolution. Here's how you could do something like that with
+                our code:
+            </p>
+            <!-- ... -->
+            <pre><code class="language-python">
+class Organism:
+...
+    def mutate(self):
+        for synapse in self.synapses:
+            synapse.weight += random.uniform(-1, 1)
+            synapse.source = random.choice(self.nodes)
+            synapse.target = random.choice(self.nodes)
+
+    def child(self, partner, mutation_rate=0.1):
+        child = Organism()
+        child.new_brain()
+        for i in range(len(self.synapses)):
+            rand = random.random()
+            if rand > 0.5:
+                child.synapses.append(self.synapses[i])
+            else:
+                child.synapses.append(partner.synapses[i])
+
+            if rand <= mutation_rate:
+                self.mutate()
+                
+        return child
+            </code></pre>
+                <!-- ... -->
+            <br>
+            <br>
+
+            <h2>Populations</h2>
+
+            <p class="intro-text">
+                In order to have a successful evolution, we need to have a population of organisms. This is because we need to have a variety of ideas in order to explore the solution space.
+                If we only have one organism, we would be stuck with that one idea and would never be able to find a better solution. The larger the population, the more ideas we have to explore,
+                but the more organisms we have to keep track of. This is a tradeoff that we have to make. Here's how you could do something like that with our code:
+            </p>
+            <!-- ... -->
+            <pre><code class="language-python">
+size = 100, 100 # 10000 organisms
+
+world = [[0 for x in range(size[0])] for y in range(size[1])] # initialize world with 0s
+
+
+for i in range(100):
+    for j in range(100):
+        creature = Organism()
+        creature.new_brain()
+        val = creature.think()
+        world[i][j] = val
+            </code></pre>
+            <!-- ... -->
+
+        </section>
+        <a href="page0.html">Next Page &raquo;</a>
+    </article>
+</main>
+
+<footer>
+    <p>© 2024 Miles Berman</p>
+</footer>
+
+</body>
+</html>

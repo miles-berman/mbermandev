@@ -51,6 +51,16 @@ class RandNode:
 
     def forward(self, value):
         self.data = value
+
+class Organism:
+...
+    def new_brain(self):
+        self.nodes.append(InnerNode())
+        self.nodes.append(RandNode()) # replaced the hardcoded 0/1 with a random int
+        
+        self.synapses.append(Synapse())
+        self.synapses[-1].source = random.choice(self.nodes)
+        self.synapses[-1].target = random.choice(self.nodes)
             </code></pre>
             <!-- ... -->
             <p class="intro-text">All we do here is simply change the hardcoded 0/1, we generate the data of the node to a random int.</p>
