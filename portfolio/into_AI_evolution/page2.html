@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Article - Miles Berman</title>
+    <link rel="stylesheet" href="../../assets/style.css">
+    <!-- Additional styles for AI article -->
+    <link rel="stylesheet" href="assets/ai-article-style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <article class="content-area">
+        <h1>Part 2: Why We Need More</h1>
+        <section class="article-section">
+            <h2>Going beyond binary</h2>
+            <p class="intro-text">
+                Once our problem becomes something more complex, we need to go beyond just a randomly 
+                generated population. Right now, we're just ignoring all the organisms that pass the challenge.
+                This will in theory work... eventually. But we can do better. 
+                Let's start with an example. Using the same organisms we coded before,
+                let's now remove all the organisms that aren't a 1. This means our problem has changed from
+                a binary problem to a unary problem.
+            </p>
+            
+            <div id="grid" class="grid-container"></div>
+            <button onclick="generateGrid()">Respawn</button>
+            <script src="assets/2/grid-script.js"></script>  
+
+            <!-- ... -->
+            <p class="intro-text">The code to make a random int instead:</p>
+            <pre><code class="language-python">
+# Python code for a random 0-10 class
+
+# RandNode
+class RandNode:
+    def __init__(self, value=0):
+        self.data = random.randint(0, 10) # random value between 0 and 10
+
+    def forward(self, value):
+        self.data = value
+            </code></pre>
+            <!-- ... -->
+
+            <br><br>
+
+            <h2>Repopulating with children instead</h2>
+            <p class="intro-text">
+                When dealing with more complex problems, a more nuanced approach is required.
+                We are now looking to populate our grid with offspring rather than random new organisms.
+                This introduces the concept of inheritance and genetic algorithms into our simulation.
+            </p>
+            
+        </section>
+        <a href="page3.html">Next Page &raquo;</a>
+    </article>
+</main>
+
+<footer>
+    <p>© 2024 Miles Berman</p>
+</footer>
+
+</body>
+</html>

@@ -134,6 +134,19 @@ h2 {
     background-color: #2980b9;
 }
 
+/* Portfolio item link button styling */
+.link-button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
 
 /* Responsive design */
 @media (max-width: 600px) {
