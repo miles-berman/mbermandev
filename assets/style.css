@@ -114,6 +114,8 @@ h2 {
 /* Portfolio item iframe styling */
 .portfolio-item iframe {
     border: none; /* Remove the border */
+    width: 100%; /* Make the iframe fill the container */
+    height: 400px; /* Set the height as needed */
 }
 
 
@@ -257,6 +259,33 @@ h2 {
 
 /* may need responsive media queries to ensure layout works on all devices */
 
+.games {
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap as needed for spacing between game images */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+
+}
+
+.apps {
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap as needed for spacing between app images */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+}
+
+.papers {
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap as needed for spacing between paper images */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+}
+
+
+.portfolio-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
 
 /* Contact Content Styling */
 .contact-content {
@@ -279,4 +308,13 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* make sure all media is responsive, centered, and correct aspect ratio */
+.responsive-media {
+    overflow: hidden;
+    width: 80%; /* Full width of the screen/container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto; /* Center the element */
 }
