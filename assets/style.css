@@ -109,6 +109,13 @@ body {
     height: 100px;
 }
 
+.icon-instructions {
+    font-size: 12px;
+    color: #313131;
+    margin-bottom: 40px;
+    margin-top: -20px;
+}
+
 
 .featured .demo-gif {
     width: 15%;
