@@ -221,4 +221,8 @@ body {
     .portfolio-item .text iframe {
         width: 100%;
     }
+    .portfolio-item .text .project-img {
+        width: 100%;
+        height: auto;
+    }
 }
