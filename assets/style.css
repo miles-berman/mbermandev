@@ -80,7 +80,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url(../assets/featured.gif);
+    background-image: url(../assets/Pocket-Drums-min.gif);
     background-position: center center;
     background-size: 100%;
     filter : brightness(1.1) blur(5px) opacity(75%) saturate(170%);
@@ -214,6 +214,11 @@ body {
     /* make sure blurred background is always too big */
     .featured::before {
         background-size: 150%;
+    }
+    /* center the navbar items */
+    .navbar ul {
+        margin-left: 0;
+        text-align: center;
     }
     .my-work {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
