@@ -1,320 +1,210 @@
-/* Reset some basic elements */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+
+.navbar {
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc; /* line under the navbar */
 }
 
-/* Apply a universal box-sizing rule */
-*, *:before, *:after {
-    box-sizing: border-box;
+.navbar ul {
+    margin-left: 10px; 
 }
 
-/* Style the body */
+.navbar li {
+    display: inline; /* make horizontal */
+    margin-right: 20px; /* space between links */
+}
+
+/* style the links */
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* hover for links */
+.navbar a:hover {
+    color: #9d9d9d;
+}
+
+
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Style the header */
-header {
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-    padding: 20px 0;
-}
-
-/* Navigation bar styles */
-nav {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Main content area */
-.main-content, .portfolio-item{
-    width: 80%;
-    margin: 40px auto;
-    padding: 0 20px;
+.title {
     text-align: center;
 }
 
-/* Main title styling */
-#home h1 {
-    font-size: 4em; 
-    margin-bottom: 0; 
+.title h1 {
+    font-size: 50px;
+    color: #3c3c3c;
+    margin-bottom: 0;
 }
 
-/* Subtitle styling */
-#home p {
-    margin-top: 0.25em; 
-    margin-bottom: 6em;
+.title h2 {
+    font-size: 20px;
+    color: #3c3c3c;
 }
 
-/* Section Title Styling */
-h2 {
-    font-size: 2.5em; 
-    margin: 40px 0;
-    padding-bottom: 10px; 
+/* about me */
+
+.about-me {
     text-align: left;
-    border-bottom: 2px solid #e1e1e1; /* Adds a subtle bottom border */
-    margin-left: 10%; 
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* box */
+    padding: 13px;
+    border-radius: 20px;
+    background-color: #f9f9f9c4;
 }
 
-/* Portfolio Item Title Styling */
-.portfolio-item h3 {
-    text-align: left;
-    font-size: 2em; /* Increase the size to make it stand out as a title */
-    margin-left: 3%;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
+/* featured project */
 
-/* Portfolio Item Description Styling */
-.portfolio-item p, .portfolio-item ul {
-    text-align: left;
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 10px;
-    margin-left: 10%;
-    font-weight: 300; 
-}
-
-/* Portfolio item list styling */
-.portfolio-item ul {
-    font-size: 0.97em;
-    padding-left: 40px; /* Adjusts padding for bullet point indentation */
-}
-
-.portfolio-item li {
-    list-style-type: disc; /* Adds bullet points */
-    margin-bottom: 3px; /* Adjusts space between bullet points */
-    font-weight: 230; 
-}
-
-/* Portfolio item iframe styling */
-.portfolio-item iframe {
-    border: none; /* Remove the border */
-    width: 100%; /* Make the iframe fill the container */
-    height: 400px; /* Set the height as needed */
-}
-
-
-/* Download Button Styling */
-.download-button {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-top: 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.download-button:hover {
-    background-color: #2980b9;
-}
-
-/* Portfolio item link button styling */
-.link-button {
-    display: inline-block;
-    padding: 10px 15px;
-    margin-top: 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-
-/* Responsive design */
-@media (max-width: 600px) {
-    .main-content, .portfolio-item, #about, #contact, nav {
-        width: 100%;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    h2, .portfolio-item h3, .portfolio-item p, .portfolio-item ul {
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .portfolio-item ul {
-        padding-left: 20px;
-    }
-
-    /* Add responsive media styles */
-    .responsive-media {
-        overflow: hidden;
-        width: 100%; /* Full width of the screen/container */
-        height: auto; /* Maintain aspect ratio */
-        display: block;
-        margin: 0 auto; /* Center the element */
-    }
-}
-
-
-/* About Me Content Styling */
-.about-content {
+.featured {
     text-align: center;
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-weight: 300;
+    margin-top: 50px;
+    /* background-image: url(pocket_drums.png); */
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 8%;
+    margin-right: 8%;
+    position: relative; /* Ensure the container is positioned */
+    overflow: hidden; /* Prevents filter effects from leaking outside */
 }
 
-/* Extras Section Styling */
-#extras h2 {
-    font-size: 2.5em;
-    margin: 40px 0;
-    padding-bottom: 10px;
-    text-align: left;
-    border-bottom: 2px solid #e1e1e1;
-    margin-left: 10%;
+.featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../assets/featured.gif);
+    background-position: center center;
+    background-size: 100%;
+    filter : brightness(1.1) blur(5px) opacity(75%) saturate(170%);
+    /* filter : blur(5px) opacity(100%) saturate(120%); */
+    z-index: -1; /* Ensure the blur is behind the content */
 }
 
-#extras .extras-content ul {
-    list-style: none;
-    text-align: left;
-    padding: 0;
-    margin-left: 10%;
+.featured h1{
+    color: rgb(253, 232, 0);
+    font-size: 20px;
 }
 
-#extras .extras-content li {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    color: #333;
+.featured h3 {
+    color: rgb(53, 53, 53);
 }
 
-#extras .extras-image {
-    width: 140px; /* Set the width as needed */
-    height: auto; /* This will maintain the aspect ratio */
-    display: block;
-    margin-bottom: 10px;
-}
-
-
-#extras .extras-content a {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#extras .extras-content a:hover {
-    background-color: #2980b9;
+.featured .text p {
+    color: rgb(41, 40, 40);
+    font-size: 14px;
 }
 
 
-.songs-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Adjust gap as needed for spacing between audio players */
-    justify-content: flex-start; /* Aligns items to the start of the container */
-}
-
-.song {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligns items to the start of the cross axis */
-}
-
-.song h4 {
-    margin: 0 0 10px 0; /* Adjust spacing as needed */
-}
-
-/* may need responsive media queries to ensure layout works on all devices */
-
-.games {
-    display: none;
-    flex-wrap: wrap;
-    gap: 20px; /* Adjust gap as needed for spacing between game images */
-    justify-content: flex-start; /* Aligns items to the start of the container */
-
-}
-
-.apps {
-    flex-wrap: wrap;
-    gap: 20px; /* Adjust gap as needed for spacing between app images */
-    justify-content: flex-start; /* Aligns items to the start of the container */
-}
-
-.papers {
-    display: none;
-    flex-wrap: wrap;
-    gap: 20px; /* Adjust gap as needed for spacing between paper images */
-    justify-content: flex-start; /* Aligns items to the start of the container */
+/* icon img */
+.icon {
+    width: 100px;
+    height: 100px;
 }
 
 
-.portfolio-nav {
+.featured .demo-gif {
+    width: 15%;
+    height: auto;
+    margin-top: 20px;
+    /* box around with padding */
+    border: 5px solid #ccc;
+}
+
+.featured .media-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    align-items: center;
 }
 
-/* Contact Content Styling */
-.contact-content {
+/* visit button */
+.featured .visit{
+    background-color: #3c3c3c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.info{
+    background-color: #ebebeb;
+    color: rgb(76, 76, 76);
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.featured p {
+    font-size: 18px;
+    color: #313131;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.projects {
+    padding: 10px;
     text-align: center;
-    font-size: 1.3em;
-    color: #333;
-    margin-bottom: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-weight: 150;
+    margin-top: 50px;
 }
 
+.sub-title {
 
-/* Footer styles */
-footer {
-    background-color: #f8f8f8;
-    color: #333;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 80px;
+}
+
+.filters {
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-/* make sure all media is responsive, centered, and correct aspect ratio */
-.responsive-media {
+.my-work {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    border-top: 2px solid #bdbdbd; /* line under the navbar */
+    /* grid of items */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.portfolio-item  {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    /* align left */
+    text-align: center;
+    /* box */
+    border-radius: 20px;
+    background-color: #e9e9e983;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.portfolio-item .text iframe {
+    border: 0;
     overflow: hidden;
-    width: 80%; /* Full width of the screen/container */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    margin: 0 auto; /* Center the element */
+}
+
+
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 32px; /* Smaller font size for smaller screens */
+    }
+    /* make sure blurred background is always too big */
+    .featured::before {
+        background-size: 150%;
+    }
 }

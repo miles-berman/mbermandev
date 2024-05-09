@@ -12,7 +12,7 @@ The repository is structured as follows:
 
 - `index.html`: The main entry point of the website.
 - `assets/`: Contains the stylesheet, images, and other static assets used across the site.
-- `portfolio/`: Contains subfolders for each project with respective resources and downloadables.
+- `portfolio/`: Contains info for each project with resources and some downloadables.
 
 ## Featured Projects
 

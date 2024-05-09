@@ -4,191 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miles Berman - Portfolio</title>
-    <meta name="description" content="Miles Berman's portfolio - game design, programming, art, and music production. Check out my latest projects!">
-    <meta name="keywords" content="Miles Berman, Portfolio, Game Design, Programming, Art, Music Production, MBerman">
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Miles Berman - Portfolio" />
-    <meta property="og:description" content="Miles Berman's portfolio - game design, programming, art, and music production." />
-    <meta property="og:image" content="https://github.com/miles-berman/mbermandev/blob/main/assets/Icon.png?raw=true" />
-    <meta property="og:url" content="https://mberman.dev" />
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <!-- Other tags here -->
-
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
 </head>
-
 <body>
-
-<header>
-    <nav>
+    <!-- navbar -->
+    <nav class="navbar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#portfolio">My Work</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#work">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-</header>
-
-<main>
-    <section id="home" class="main-content">
+    <!-- title -->
+    <div class="title">
         <h1>Miles Berman</h1>
         <p>Portfolio 2024 - mileshb16@gmail.com</p>
-    </section>
-
-    <section id="portfolio">
-        <h2>My Work</h2>
-        <!-- navbar for classes -->
-        <nav class="portfolio-nav">
-            <ul>
-                <li><a href="#apps" class="apps-button">Apps</a></li>
-                <li><a href="#games" class="games-button">Games</a></li>
-                <li><a href="#papers" class="papers-button">Papers</a></li>
-            </ul>
-        </nav>        
-
-        
-        <section class="games">
-            <!-- Portfolio Item 1 -->
-            <div class="portfolio-item">
-                <h3><strong>City Views</strong></h3>
-                <p>City Views is a personal project I have been working on for quite a while. The idea behind this game was to create an experience where the player has very limited choices for movement and interaction in the world, and is forced to just sit and watch the world around them. I wanted to challenge myslef to create the game from scratch, working on all the music, art, animations, and game mechanics myself. It is a project I am very proud of, and demonstrates a lot of my skills, including:</p>
-                <ul>
-                    <li>Algorythmic Music Generation</li>
-                    <li>Animation And Art Skills</li>
-                    <li>C# Programming and Unity Development</li>
-                    <li>Solo Game Development Skills</li>
-                </ul>
-                <img class="responsive-media" src="portfolio/CityViews/cover.jpg" alt="Project Image" width="700" height="500">
-                <br>
-                <a href="portfolio/CityViews/Game.zip" class="download-button" download>Download Project</a>
-            </div>
-
-            <!-- Portfolio Item 2 -->
-            <div class="portfolio-item">
-                <h3><strong>The Report</strong></h3>
-                <p>The Report is a collaborative project I made with some friends at UC Santa Cruz. While initially started for a school project, we decided to continue work on the game after the class was complete. Throughout development, my contributions included:</p>
-                <ul>
-                    <li>All Music, Sound Effects, & Audio Implementation</li>
-                    <li>Art Creation</li>
-                    <li>Programming</li>
-                </ul>
-                <iframe class="responsive-media" src="https://finndepuy.github.io/The-Report/" title="Game Title" width="750" height="500" allowfullscreen style="border:none;" scrolling="no"></iframe>
-            </div>
-        </section>
-
-        <section class="apps">
-
-            <!-- Portfolio Item 3 -->
-            <div class="portfolio-item">
-                <h3><strong>Pocket Drums</strong></h3>
-                <!-- image -->
-                <img class="responsive-media" src="portfolio/Pocket-Drums.jpg" alt="Project Image" width="800" height="500">
-                <br>
-                <a href="https://mbermanucsc.github.io/Pocket-Drums/" class="download-button" target="_blank">Use Synth</a>
-            </div>
-
-            <!-- Portfolio Item 4 -->
-            <div class="portfolio-item">
-                <h3><strong>SMPL-HLPR</strong></h3>
-                <p>A python "sampler" to change bit depth, sample rate, and pitch of WAV, MP3, & M4A files. 
-    The app allows users to load files, make adjustments, and save the new samples. Users can adjust the bit depth, sample rate, and pitch of the audio, and apply these changes on the fly.</p>
-                <ul>
-                    <li>Python Programming</li>
-                    <li>Audio Skills</li>
-                    <li>UI and App Creation</li>
-                </ul>
-                <img class="responsive-media" src="portfolio/SMPL-HLPR/cover.jpg" alt="Project Image" width="800" height="500">
-                <br>
-                <a href="portfolio/SMPL-HLPR/SMPL-HLPR.zip" class="download-button" download>Download Project</a>
-            </div>
-        
-            
-        </section>
-        <section class="papers">
-            <!-- Portfolio Item 4 -->
-            <div class="portfolio-item">
-                <h3><strong>An Intro To AI Using Natural Selection and Mutations</strong></h3>
-                <p>This paper I've written covers a somewhat abstract form of AI using natural selection,
-                    mutation, and a population of "organisms" to solve problems. The idea is that, simply through natural selection and mutation, a population of "organisms" can evolve to fit a multitude of problems. The paper is a great example of my writing and research skills, and demonstrates my understanding of AI and programming concepts.</p>
-                </p>
-                <ul>
-                    <li>Python and JS Programming</li>
-                    <li>Research and Writing Skills</li>
-                    <li>Understanding of AI and Programming Concepts</li>
-
-                </ul>
-                <img class="responsive-media" src="portfolio/AI_evolution/cover.png" alt="Project Image" >
-                <br>
-                <!-- link button to page0.html -->
-                <a href="portfolio/AI_evolution/0" class="download-button" target="_blank">Read Paper</a>
-            </div>
-            <h2>Extras</h2>
-            <div class="extras-content">
-                <div class="portfolio-item">
-                    <ul>
-                        <li>
-                            <h3>Video Game Audio Pack</h3>
-                            <p class="extras-description">An asset pack of some audio clips I've made over the years. Includes some ambiance loops, songs, and one shots.</p>
-                            <!-- Download button for the entire pack -->
-                            <a href="portfolio/GamePacks/GamePack(1).zip" class="download-button" download>Download Pack</a>
-                            
-                            <div class="songs-container">
-                                <!-- Title and Audio player for song 1 -->
-                                <div class="song">
-                                    <h4>loadUp</h4>
-                                    <audio controls>
-                                        <source src="portfolio/GamePacks/loadUp.mp3" type="audio/mpeg">
-                                        Your browser does not support the audio element.
-                                    </audio>
-                                </div>
-    
-                                <!-- Title and Audio player for song 2 -->
-                                <div class="song">
-                                    <h4>doorSqueak</h4>
-                                    <audio controls>
-                                        <source src="portfolio/GamePacks/doorSqueak.mp3" type="audio/mpeg">
-                                        Your browser does not support the audio element.
-                                    </audio>
-                                </div>
-                                <!-- Add more divs with titles and audio players for additional songs if needed -->
-                            </div>
-                        </li>
-                        <!-- Add more items in the same format -->
-                    </ul>
+    </div>
+    <!-- about me -->
+    <div class="about-me" id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm Miles, a senior at UC Santa Cruz studying Computer Science Game Design.
+            I'm passionate about making games and programming, creating music, and data science.
+            I hope you enjoy my portfolio and projects.
+        </p>
+    </div>
+    <!-- featured section -->
+    <div class="featured" id="featured">
+        <h1>New!</h1>
+        <div class="featured-project">
+           <!-- icon -->
+           <h3>Pocket Drums</h3>
+           <a href="https://mbermanucsc.github.io/Pocket-Drums/">
+            <img class='icon' src="assets/Pocket-Drums_icon.png" alt="Pocket Drums">
+            </a>
+            <!-- text -->
+            <div class="text">
+                <p>Click the icon to use, or drag it to bookmark!</p>
+                <p>A web-based drum machine, synth, and looper that allows anyone to create music!</p>
+                <!-- buttons & media -->
+                <div class="media-container">
+                    <a href="#Pocket-Drums" class="info">Dev Info</a>
                 </div>
             </div>
-        </section>
-    </section>
-
-        
-
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                I am a Senior at The University of California, Santa Cruz studying Computer Science Game Design. As displayed in my portfolio, my interests and skills in programming, music, and art have led me to create many different projects; both in video games, and other fields as well. 
-            </p>
         </div>
-    </section>
+    </div>
 
-    <section id="contact">
-        <h2>Contact & Links</h2>
-        <div class="contact-content">
-            <p>Email: mileshb16@gmail.com</p>
-            <p>GitHub: <a href="https://github.com/miles-berman" target="_blank">miles-berman</a></p>
-            <!-- Add more contact details here -->
+    <!-- my work -->
+    <div class="sub-title" id="work">
+        <h1>My Work</h1>
+    </div>
+    <div class="my-work">
+        <div class="portfolio-item" id="Pocket-Drums">
+            <!-- icon -->
+            <h3>Pocket Drums</h3>
+            <!-- text -->
+            <div class="text">
+                <!-- img -->
+                <img height="320" width="190" class="project-img" src="assets/Pocket-Drums.gif" width=70% alt="Pocket Drums">
+                <p>A web-based drum machine, synth, and looper that allows anyone to create music!</p>
+                <a href="https://mbermanucsc.github.io/Pocket-Drums/">
+                    <img class='icon' src="assets/Pocket-Drums_icon.png" alt="Pocket Drums">
+                    </a>
+                <p>Using the web audio api, the machine has the ability to synthesize different drum sounds, synthesizer tones,
+                    and more. Audio file samples can also be loaded in, or recorded straight from the user's microphone.
+                    Use the built in algorithms for generating sequences and melodies, or plug in a MIDI keyboard to play
+                    the sounds just how you like them!</p>
+                </p> 
+                <!-- <a href="https://github.com/mbermanUCSC/Pocket-Drums" class="info">GitHub</a> -->
+            </div>
         </div>
-    </section>
+        <div class="portfolio-item" id="The-Report">
+            <!-- icon -->
+            <h3>The Report</h3>
+            <!-- text -->
+            <div class="text">
+                <!-- iframe -->
+                <iframe width="450" height="250" src="https://finndepuy.github.io/The-Report/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen scrolling="no"></iframe>
+                <p>A collaborative game project that focuses on how perspective can shape experiences. Designed with the theme:
+                    "Nearby in space, but distant in time" using the Phaser JS game engine.
+                </p>
+                <a href="https://finndepuy.github.io/The-Report/">
+                    <img class='icon' src="assets/The-Report_icon.png" alt="The Report">
+                    </a>
+                <p>
+                    "The Report" features a unique perspective mechanic that allows the player to
+                    shift the game narrative as they play. You can also find the music and sound effect files I created for the game below.
+                </p>
+                <!-- <a href="https://github.com/FinnDePuy/The-Report" class="info">GitHub</a> -->
+            </div>
+        </div>
+    </div>
 
-</section>
 
 
-<footer>
-    <p>© 2024 Miles Berman</p>
-</footer>
-<script src="assets/site.js"></script>
 
+    <script src="script.js"></script>
 </body>
 </html>
