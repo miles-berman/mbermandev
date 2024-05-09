@@ -208,4 +208,7 @@ body {
     .featured::before {
         background-size: 150%;
     }
+    .my-work {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
 }
