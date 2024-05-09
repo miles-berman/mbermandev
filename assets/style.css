@@ -211,4 +211,7 @@ body {
     .my-work {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
+    .portfolio-item .text iframe {
+        width: 100%;
+    }
 }
