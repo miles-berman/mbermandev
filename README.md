@@ -14,12 +14,6 @@ The repository is structured as follows:
 - `assets/`: Contains the stylesheet, images, and other static assets used across the site.
 - `portfolio/`: Contains info for each project with resources and some downloadables.
 
-## Featured Projects
-
-- **City Views**: A personal project where the player experiences limited interaction, emphasizing observation. I challenged myself to create all aspects from scratch.
-- **The Report**: A collaborative project that began with friends at UC Santa Cruz. My contributions span across music, sound design, art, and programming.
-- **SMPL-HLPR**: An app made in Python for audio manipulation, allowing real-time changes to bit depth, sample rate, and pitch of audio files.
-
 ## Contact
 
 For collaboration or inquiries, feel free to reach out via email at mileshb16@gmail.com or check out my [GitHub](https://github.com/miles-berman).
