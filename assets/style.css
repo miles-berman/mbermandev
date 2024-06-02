@@ -31,6 +31,9 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
+/* Top of Page */
+
 .title {
     text-align: center;
 }
@@ -59,7 +62,9 @@ body {
     background-color: #f9f9f9c4;
 }
 
-/* featured project */
+
+
+/* Featured Project */
 
 .featured {
     text-align: center;
@@ -100,21 +105,6 @@ body {
 .featured .text p {
     color: rgb(41, 40, 40);
     font-size: 14px;
-}
-
-
-/* icon img */
-.icon {
-    /* width: 100px;
-    height: 100px; */
-    margin-bottom: 10px;
-}
-
-.icon-instructions {
-    font-size: 12px;
-    color: #313131;
-    margin-bottom: 40px;
-    margin-top: -20px;
 }
 
 
@@ -160,6 +150,25 @@ body {
     margin-top: 10px;
     font-weight: bold;
 }
+
+
+
+/* Main Portfolio */
+
+/* icon img */
+.icon {
+    /* width: 100px;
+    height: 100px; */
+    margin-bottom: 10px;
+}
+
+.icon-instructions {
+    font-size: 12px;
+    color: #313131;
+    margin-bottom: 40px;
+    margin-top: -20px;
+}
+
 
 .projects {
     padding: 10px;
