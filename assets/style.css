@@ -123,14 +123,9 @@ body {
 }
 
 /* visit button */
-.featured .visit{
-    background-color: #3c3c3c;
+.media-container a{
+    background-color: #31313143;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-right: 10px;
-    margin-left: 10px;
 }
 
 .info{
