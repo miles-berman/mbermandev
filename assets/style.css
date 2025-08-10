@@ -1,144 +1,17 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-
-h1, h2, h3 {
-    font-weight: 300;
-    margin: 0;
-}
-p {
-    font-weight: 200;
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.row-even {
-    display: flex;
-    justify-content: space-between; /* logo on left, menu on right */
-    align-items: center;           /* vertical alignment */
-}
-.row-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.grid-2xn {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-.content-box {
-    padding: 20px;
-    background-color: #fafafa;
-    border-radius: 10px;
-}
-.content-box h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-.content-box p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-
-
-/* BODY */
-/* Background */
-body {
-    background-color: #fafafa;
-}
-/* Content Container */
-.body-container {
-    width: 96%;
-    margin: 0 auto; /* self center */
-    margin-top: 20px;
-    
-    background-color: #c7c7c727;
-    border-radius: 20px;
-
-    font-family: 'Figtree', sans-serif;
-    color: rgb(50, 50, 50);
-    overflow: hidden;
-}
-/* NAV */
-nav {
-    padding: 15px 40px;
-    background-color: rgb(255, 255, 255);
-}
-/* Logo */
-nav h2 {
-    margin: 0;
-    font-size: 2.3em;
-}
-/* Menu List */
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 35px; /* spacing between items */
-}
-/* Menu Item */
-nav ul li a {
-    position: relative; /* allows effects */
-    display: inline-block; /* allows effects */
-    padding: 8px 0; /* space above line, line overhang */
-
-    font-size: 1.3em;
-    color: rgb(120, 120, 120);
-    font-weight: 400;
-    transition: color 0.3s ease, transform 0.2s ease;
-}
-/* Menu Item (Animation) */
-nav ul li a:hover {
-    color: rgb(73, 73, 73);
-    transform: translateY(-2px);
-    font-weight: 700;
-}
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0; 
-    height: 4px; /* height of the underline */
-    width: 0;
-    background-color: rgb(217, 217, 217);
-    transition: width 0.3s ease;
-}
-nav ul li a:hover::after {
-    width: 100%; /* expand underline on hover */
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 10px;
-}
-
-/* CONTENT */
-/* ------------- */
-
 /* HEADER */
 header {
     position: relative;
     overflow: hidden;
     padding: 20px 20px;
-    height: 320px;
+    height: 150%;
     line-height: 0.8;
-    background-color: rgb(184, 203, 229);
+    background-color: var(--color-bright-header);
 }
 header h1 {
     position: relative;
     z-index: 1;
-    font-size: 10em;
+    font-size: 8em;
     font-weight: 800;
     color: rgb(255, 255, 255);
 }
@@ -146,133 +19,85 @@ header h2{
     position: relative;
     z-index: 1;
     font-size: 2em;
-    margin-left: 20px;
     margin-top: 15px;
-    color: rgb(112, 142, 167);
+    margin-left: 10px;
+    color: rgb(83, 105, 123);
+    padding: 20px;
 }
-
-
 .header-pfp {
   position: absolute;
   right: 0;
-  bottom: 0;                             /* anchor */
-  width: 350px;
-  aspect-ratio: 1 / 1;                   /* keep a stable box (tweak to your image) */
+  bottom: 0; /* anchor */
+  width: 380px;
   z-index: 0;
   pointer-events: none;
 }
-
 .header-pfp img {
   width: 100%;
   height: 100%;
-  object-fit: contain;  /* or 'cover' if you prefer */
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
 .dock {
   position: fixed;
-  bottom: 20px;                /* lift it off the bottom */
-  left: 200px;                   /* gap on the left */
-  right: 200px;                  /* gap on the right */
-  height: 30px;
+  bottom: 20px;
+  left: 5vw;
+  right: 5vw;
+  height: 68px;
+  z-index: 1000;
 
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   border: 2px solid rgba(0, 0, 0, 0.08);
-  z-index: 1000;
-}
-.dock ul {
-    width: 90%; /* fill the dock */
 }
 .dock li {
-    flex: 1; /* each item takes equal width */
+  flex: 1;
+  text-align: center;
 }
 .dock a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    transition: color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
 }
-
-.pinned {
-    padding: 20px 10px;
-    gap: 20px;
+.dock svg {
+  margin-bottom: 3px;
 }
 
 /* ANIMATIONS */
-/* ------------- */
+/* -------------------------- */
 header h1,
 header h2 {
     opacity: 0;
     transform: translateX(-40px);
-    transition: opacity 1.8s ease, transform 0.8s ease;
+    transition: opacity 1.8s ease, transform 1.4s ease;
 }
-
-body.loaded header h1,
-body.loaded header h2 {
+header h2 {
+    transition: opacity 1.6s ease, transform 1.2s ease;
+}
+header h1.visible,
+header h2.visible {
     opacity: 1;
     transform: translateX(0);
 }
+
 header .header-pfp {
     transform: translateY(50%);
 }
-
-body.loaded header .header-pfp {
+.header-pfp.visible {
     transform: translateY(0); 
     transition: opacity 1.2s ease, transform 1.5s ease;
 }
-
-
-@media (max-width: 880px) {
+@media (max-width: 900px) {
     .header-pfp {
         opacity: 0.3;
     }
 }
 
-/* mobile */
-@media (max-width: 600px) {
-    nav {
-        padding: 10px 20px;
-    }
-    nav h2 {
-        font-size: 1.5em;
-    }
-    nav ul li a {
-        font-size: 0.9em;
-    }
-    header h1 {
-        font-size: 6em;
-    }
-    header h2 {
-        font-size: 1.5em;
-    }
-    .header-pfp {
-        width: 250px;
-    }
+@media (prefers-color-scheme: dark) {
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #181818;
-        color: #e0e0e0;
-    }
-    nav {
-        background-color: #242424;
-    }
-    header {
-        background-color: #1e1e1e;
-    }
-    footer {
-        background-color: #242424;
-    }
-    .content-box {
-        background-color: #2a2a2a;
-    }
-    .body-container {
-        background-color: #e6e7e727;
-        color: rgb(200, 200, 200);
-    }
+@media (max-width: 600px) {
 }

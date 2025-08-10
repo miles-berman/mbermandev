@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Bright mode colors */
+    --color-bright-body: #fafafa;
+    --color-bright-text: rgb(125, 125, 125);
+    --color-bright-text-light: rgb(130, 141, 154);
+    --color-bright-text-heavy: rgb(50, 50, 50);
+    --color-bright-header: rgb(184, 203, 229);
+    --color-bright-border: rgb(220, 220, 220);
+
+    /* Dark mode colors */
+    --color-dark-body: #242424;
+    --color-dark-text: rgb(200, 200, 200);
+    --color-dark-text-light: rgb(180, 180, 180);
+    --color-dark-text-heavy: rgb(240, 240, 240);
+    --color-dark-header: #1e1e1e;
+    --color-dark-border: rgb(60, 60, 60);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+    font-weight: 300;
+    font-size: 1.8em;
+    color: var(--color-bright-text-heavy);
+}
+h2 {
+    font-weight: 300;
+    font-size: 1.6em;
+    color: var(--color-bright-text-heavy);
+}
+h3 {
+    font-weight: 300;
+    font-size: 1.4em;
+    color: var(--color-bright-text-heavy);
+}
+ul {
+    list-style: none;
+}
+/* img {
+  max-width: 100%;
+  height: auto; 
+} */
+body {
+    background-color: #ebf0f1;
+    font-family: 'Figtree', sans-serif;
+    font-weight: 200;
+    font-size: 1.3em;
+    color: var(--color-bright-text);
+}
+.body-container {
+    width: 96%;
+    margin: 20px auto; /* self center */
+    border-radius: 20px;
+    background-color: var(--color-bright-body);
+    overflow: hidden;
+}
+/* NAV */
+nav {
+    color: var(--color-bright-text-heavy);
+    padding: 15px 40px;
+}
+nav h1 { /* logo */
+    font-size: 2em; 
+}
+nav h1 a {
+    color: var(--color-bright-text-heavy);
+    text-decoration: none;
+}
+nav ul { /* menu */
+    list-style: none; 
+    display: flex;
+}
+nav ul li a {
+    font-size: 1.3em; 
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* ANIMATIONS */
+/* -------------------------- */
+
+
