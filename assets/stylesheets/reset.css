@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
+    --font-weight: 200;
+    --fontsize-h1: 1.8em;
+    --fontsize-h2: 1.4em;
+    --fontsize-h3: 1.35em;
+    --fontsize-h4: 1.3em;
+    --fontsize-body: 1.3em;
+
     /* Bright mode colors */
     --color-bright-body: #fafafa;
     --color-bright-text: rgb(125, 125, 125);
@@ -24,19 +31,24 @@
   padding: 0;
 }
 h1 {
-    font-weight: 300;
-    font-size: 1.8em;
+    font-weight: calc(var(--font-weight) + 100);
+    font-size: var(--fontsize-h1);
     color: var(--color-bright-text-heavy);
 }
 h2 {
-    font-weight: 300;
-    font-size: 1.6em;
+    font-weight: calc(var(--font-weight) + 100);
+    font-size: var(--fontsize-h2);
     color: var(--color-bright-text-heavy);
 }
 h3 {
-    font-weight: 300;
-    font-size: 1.4em;
+    font-weight: calc(var(--font-weight) + 50);
+    font-size: var(--fontsize-h3);
     color: var(--color-bright-text-heavy);
+}
+h4 {
+    font-weight: calc(var(--font-weight) + 50);
+    font-size: var(--fontsize-h4);
+    color: var(--color-bright-text);
 }
 ul {
     list-style: none;
@@ -48,8 +60,8 @@ ul {
 body {
     background-color: #ebf0f1;
     font-family: 'Figtree', sans-serif;
-    font-weight: 200;
-    font-size: 1.3em;
+    font-weight: var(--font-weight);
+    font-size: var(--fontsize-body);
     color: var(--color-bright-text);
 }
 .body-container {

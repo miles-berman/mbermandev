@@ -68,28 +68,20 @@ header h2{
 
 /* ANIMATIONS */
 /* -------------------------- */
-header h1,
-header h2 {
-    opacity: 0;
-    transform: translateX(-40px);
-    transition: opacity 1.8s ease, transform 1.4s ease;
+header h1[data-animate],
+header h2[data-animate] {
+  --enter-transform: translateX(-40px);
+  --enter-filter: none;
+  --transition: opacity 1.8s ease, transform 1.4s ease;
 }
-header h2 {
+header h2[data-animate] {
     transition: opacity 1.6s ease, transform 1.2s ease;
 }
-header h1.visible,
-header h2.visible {
-    opacity: 1;
-    transform: translateX(0);
+
+header .header-pfp[data-animate] {
+    --enter-transform: translateY(50%);
 }
 
-header .header-pfp {
-    transform: translateY(50%);
-}
-.header-pfp.visible {
-    transform: translateY(0); 
-    transition: opacity 1.2s ease, transform 1.5s ease;
-}
 @media (max-width: 900px) {
     .header-pfp {
         opacity: 0.3;
