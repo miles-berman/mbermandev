@@ -1,22 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="/src//styles/global.css" />
-  <link rel="stylesheet" href="/src//styles/components.css" />
-  <link rel="stylesheet" href="/src//styles/contact.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Miles Berman - Contact</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/global.css"/>
+  <link rel="stylesheet" href="/src/styles/components.css"/>
+  <link rel="stylesheet" href="/src/styles/contact.css"/>
+
+  <!-- Components -->
+  <script type="module" src="/src/js/components.js"></script>
 </head>
 <body>
-    <header>
-        <a href="/"><h1>Miles Berman</h1></a>
-        <nav>
-            <a href="/work.html">Work</a>
-            <a href="/about.html">About</a>
-            <a href="/contact.html" class="cta">Contact</a>
-        </nav>
-    </header>
+    <site-header></site-header>
 
     <section class="">      
         <div class="container">
@@ -47,29 +45,9 @@
             <button type="submit" class="btn primary">Send Message</button>
         </form>
     </section>
-
-
-    <footer>
-        © <span id="year"></span> Miles Berman. All rights reserved.
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-    <script>
-        const reveals = document.querySelectorAll('.reveal');
-
-        const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            obs.unobserve(entry.target); // only trigger once
-            }
-        });
-        }, { threshold: 0.1 });
-
-        reveals.forEach(el => observer.observe(el));
-    </script>
+    
+    <site-footer></site-footer>
+    <!-- Global behaviors -->
+  <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>

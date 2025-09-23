@@ -46,8 +46,5 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; text-align: center; }
-    .hero iframe { 
-        display: none;
-    }
+    
 }

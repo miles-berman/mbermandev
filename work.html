@@ -1,52 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="/src//styles/global.css" />
-  <link rel="stylesheet" href="/src//styles/components.css" />
-  <link rel="stylesheet" href="/src//styles/work.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Miles Berman - Work</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/global.css"/>
+  <link rel="stylesheet" href="/src/styles/components.css"/>
+
+  <!-- Components -->
+  <script type="module" src="/src/js/components.js"></script>
 </head>
 <body>
-    <header>
-        <a href="/"><h1>Miles Berman</h1></a>
-        <nav>
-            <a href="/work.html">Work</a>
-            <a href="/about.html">About</a>
-            <a href="/contact.html" class="cta">Contact</a>
-        </nav>
-    </header>
+  <site-header></site-header>
 
-    <section class="">      
-        <div class="container">
-            <h1>My Work</h1>
-            <p class="subhead">A showcase of my recent projects and collaborations.</p>
-        </div>
+  <main>
+    <section>
+      <div class="container">
+        <h1>My Work</h1>
+        <p class="subhead">A showcase of my recent projects and collaborations.</p>
+        <!-- Add your project grid/sections here -->
+      </div>
     </section>
+  </main>
 
+  <site-footer></site-footer>
 
-    <footer>
-        © <span id="year"></span> Miles Berman. All rights reserved.
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-    <script>
-        const reveals = document.querySelectorAll('.reveal');
-
-        const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            obs.unobserve(entry.target); // only trigger once
-            }
-        });
-        }, { threshold: 0.1 });
-
-        reveals.forEach(el => observer.observe(el));
-    </script>
+  <!-- Global behaviors -->
+  <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>

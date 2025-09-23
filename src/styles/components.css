@@ -21,6 +21,10 @@ header h1 {
     font-size: 1.6rem;
     font-weight: bold;
 }
+header a img {
+    min-height: 60px;
+
+}
 header a {
     text-decoration: none;
 }
