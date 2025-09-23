@@ -14,6 +14,8 @@ header {
 
   border-bottom: 1px solid var(--color-frame);
   background: var(--color-content-bg);
+
+  z-index: 1000;
 }
 header h1 {
     font-size: 1.6rem;
@@ -67,8 +69,6 @@ footer {
     height: auto;
 }
 
-
-
 ul.box-list {
     list-style: none;
     padding: 0;
@@ -109,3 +109,29 @@ section h3 { font-size: 2rem; }
 }
 
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+ /* Pill List */
+.pill-list { display:flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.pill-list li { border:var(--frame-size) solid var(--color-frame); padding:.4rem .6rem; border-radius: 999px; background:#fff; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform .8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+}
+
+

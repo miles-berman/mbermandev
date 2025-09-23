@@ -13,8 +13,8 @@
     <a href="/"><h1>Miles Berman</h1></a>
     <nav>
       <a href="/work.html">Work</a>
-      <a href="/about">About</a>
-      <a href="/contact" class="cta">Get a Quote</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="cta">Contact</a>
     </nav>
   </header>
 
@@ -22,8 +22,8 @@
     <div>
       <h2>Web & Developer Services </h2>
       <p>Design-first, performance-obsessed web development. Fast, accessible, and effective websites that convert.</p>
-      <a href="#contact" class="btn primary">Start a Project</a>
-      <a href="#work" class="btn">See Work</a>
+      <a href="/contact.html" class="btn primary">Start a Project</a>
+      <a href="/work.html" class="btn">See Work</a>
     </div>
     <div>
       <!-- <img src="/assets/hero1.png" alt="Mockup" /> -->
@@ -35,7 +35,7 @@
     </div>
   </section>
 
-  <section aria-label="Clients" class="clients">
+  <section aria-label="Clients" class="clients reveal">
     <div class="container">
       <div>
         <span class="eyebrow">Trusted by teams at</span>
@@ -50,7 +50,7 @@
   </section>
 
   <section id="services" aria-labelledby="services-heading">
-    <div class="container">
+    <div class="container reveal">
       <h3 id="services-heading">Services</h3>
       <div class="cards">
         <article class="card">
@@ -87,7 +87,7 @@
 
 
   <!-- Testimonials -->
-  <section id="testimonials" aria-labelledby="testimonials-heading" class="testimonials">
+  <section id="testimonials" aria-labelledby="testimonials-heading" class="testimonials reveal">
     <div class="container">
       <h3 id="testimonials-heading">What clients say</h3>
       <div class="quotes">
@@ -104,7 +104,7 @@
   </section>
 
   <!-- Tech stack / capabilities -->
-  <section id="stack" aria-labelledby="stack-heading" class="stack">
+  <section id="stack" aria-labelledby="stack-heading" class="stack reveal">
     <div class="container">
       <h3 id="stack-heading">Skills</h3>
       <ul class="pill-list" role="list">
@@ -115,32 +115,16 @@
 
   <!-- Numbers / quick proof -->
   <section class="stats" aria-label="Impact Stats">
-    <div class="container stat-grid">
-      <div class="stat"><div class="num">92+</div><div class="label">Lighthouse</div></div>
-      <div class="stat"><div class="num"><span aria-hidden="true">↑</span>34%</div><div class="label">Conversion lift</div></div>
-      <div class="stat"><div class="num"><span aria-hidden="true">↓</span>47%</div><div class="label">Bounce reduction</div></div>
-      <div class="stat"><div class="num"><span aria-hidden="true">≤</span>1s</div><div class="label">Time to interactive</div></div>
+    <div class="container stat-grid reveal">
+      <div class="stat"><div class="num">8+</div><div class="label">Actively Maintained Sites</div></div>
+      <div class="stat"><div class="num">3</div><div class="label">Years of Professional Experience</div></div>
+      <div class="stat"><div class="num">Insured</div><div class="label">Professional Liability Insurance</div></div>
     </div>
   </section>
 
-  <section class="examples" id="work" aria-labelledby="work-heading">
-    <div class="container">
-      <h3 id="work-heading">Recent Work</h3>
-        <article class="card">
-          <img src="/assets/work/cars-reimagined.pdf" alt="Cars Reimagined website screenshot" />
-          <h4>Cars Reimagined</h4>
-          <p>Showcasing a collection of custom car builds and restorations.</p>
-          <p>Available 14th Oct 2025</p>
-          <!-- purchase button -->
-          <a href="https://www.accartbooks.com/us/book/restomods/" class="btn">More Info</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
 
   <footer>
-    © <span id="year"></span> Miles. All rights reserved.
+    © <span id="year"></span> Miles Berman. All rights reserved.
   </footer>
 
   <script>
@@ -148,38 +132,20 @@
   </script>
 
   <script>
-    // Scale factor: how much of the parent's scroll delta to apply to the iframe
-    const SCALE = 1.2;
+    const reveals = document.querySelectorAll('.reveal');
 
-    const iframe = document.getElementById('shopFrame');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target); // only trigger once
+        }
+      });
+    }, { threshold: 0.1 });
 
-    // Track last scroll position to compute delta
-    let lastY = window.scrollY;
-    let ticking = false;
-
-    window.addEventListener('scroll', () => {
-      const currentY = window.scrollY;
-      const delta = currentY - lastY; // positive = scrolling down; negative = up
-      lastY = currentY;
-
-      // rAF throttle for smoother messaging
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(() => {
-          try {
-            // Send only the delta; child will scrollBy this amount
-            iframe.contentWindow.postMessage(
-              { type: 'scrollDelta', dy: delta * SCALE },
-              window.location.origin // same-origin recommended
-            );
-          } catch (e) {
-            // ignore if iframe not ready yet
-          }
-          ticking = false;
-        });
-      }
-    }, { passive: true });
+    reveals.forEach(el => observer.observe(el));
   </script>
+
 
 
 

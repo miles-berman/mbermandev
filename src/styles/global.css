@@ -32,9 +32,6 @@ svg { overflow: visible; }
 }
 /* Dark */
 @media (prefers-color-scheme: dark) {
-  :root:not(.color-theme--light):not([data-theme="light"]) {
-    
-  }
 }
 
 /* Font & Sizes */
@@ -115,4 +112,3 @@ p {
   --color-button-text: #fff;
   --color-frame: #eee;
 }
-

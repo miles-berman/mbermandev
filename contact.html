@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/src//styles/global.css" />
+  <link rel="stylesheet" href="/src//styles/components.css" />
+  <link rel="stylesheet" href="/src//styles/contact.css" />
+  <title>Miles Berman - Contact</title>
+</head>
+<body>
+    <header>
+        <a href="/"><h1>Miles Berman</h1></a>
+        <nav>
+            <a href="/work.html">Work</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html" class="cta">Contact</a>
+        </nav>
+    </header>
+
+    <section class="">      
+        <div class="container">
+            <h1>Let's talk about your project</h1>
+            <p class="subhead">Whether you need a brand-new site, custom integrations, or ongoing support — let’s connect.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact container reveal">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="fb4df110-0765-47e3-bdf2-413c9752bcfa" />
+            <div 
+            style="margin-bottom: 50px;">
+                <p>All emails are sent securely through Web3Forms to <a href="mailto:contact@mberman.dev">contact@mberman.dev</a>. Feel free to email me directly, or by using the form below.</p>
+            </div>
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" maxlength="2500" required></textarea>
+            </div>
+            <button type="submit" class="btn primary">Send Message</button>
+        </form>
+    </section>
+
+
+    <footer>
+        © <span id="year"></span> Miles Berman. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+
+        const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target); // only trigger once
+            }
+        });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
