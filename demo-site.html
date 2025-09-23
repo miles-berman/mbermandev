@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Brand — Placeholder Shop</title>
+  <style>
+    /* ---- Minimal, client-ready Shopify-style theme ---- */
+    :root {
+      --bg: #f6f7fb;
+      --panel: #ffffff;
+      --ink: #0f172a;
+      --muted: #5b6377;
+      --line: #e6e8f0;
+      --brand: #0ea5e9;
+      --brand-ink: #ffffff;
+      --radius: 14px;
+      --shadow: 0 10px 28px rgba(2, 6, 23, 0.08);
+      --maxw: 1120px;
+      --gutter: 20px;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; color: var(--ink); background: var(--bg); overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+    /* Announcement bar */
+    .announce { background: #0f172a; color: #e5e7eb; text-align: center; padding: 10px var(--gutter); font-size: 14px; }
+
+    /* Header */
+    .header { position: sticky; top: 0; z-index: 40; background: rgba(255,255,255,.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+    .header .inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; height: 64px; }
+    .brand { font-weight: 800; letter-spacing: .2px; }
+    .brand .badge { display: inline-block; width: 22px; height: 22px; border-radius: 6px; background: linear-gradient(135deg, var(--brand), #22d3ee); margin-right: 10px; vertical-align: -4px; box-shadow: 0 6px 18px rgba(14,165,233,.35); }
+    .nav { display: flex; gap: 18px; justify-content: center; font-weight: 600; color: #374151; }
+    .tools { display: flex; gap: 10px; justify-content: flex-end; }
+    .btn-icon { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: #fff; box-shadow: 0 4px 12px rgba(2,6,23,.04); font-weight: 600; color: #1f2937; }
+    .btn { padding: 12px 16px; border-radius: 12px; background: var(--brand); color: var(--brand-ink); font-weight: 700; border: 0; box-shadow: 0 10px 22px rgba(14,165,233,.25); cursor: pointer; }
+
+    /* Hero */
+    .banner { border-radius: 20px; background: linear-gradient(135deg, rgba(14,165,233,.16), rgba(99,102,241,.12)), #ffffff; border: 1px solid var(--line); box-shadow: var(--shadow); display: grid; grid-template-columns: 1.1fr .9fr; overflow: hidden; }
+    .banner .copy { padding: 34px; }
+    .kicker { color: #059669; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-size: 12px; }
+    h1 { font-size: clamp(28px, 4.2vw, 44px); line-height: 1.1; margin: 8px 0 10px; }
+    .lead { color: var(--muted); max-width: 55ch; }
+    .banner .art { padding: 24px; background:
+      radial-gradient(500px 220px at 80% 30%, rgba(99,102,241,.25), transparent 60%),
+      radial-gradient(400px 200px at 20% 80%, rgba(14,165,233,.22), transparent 60%),
+      linear-gradient(180deg, #f8fafc, #eef2ff);
+      display: grid; place-items: center; }
+    .device { width: 88%; aspect-ratio: 16/10; border-radius: 18px; border: 1px solid var(--line); background: linear-gradient(180deg, #f5f7ff, #eef2ff); box-shadow: var(--shadow); position: relative; overflow: hidden; }
+    .device .bar { height: 38px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 8px; padding: 0 12px; background: #fff; }
+    .dot { width: 10px; height: 10px; border-radius: 99px; }
+    .dot.r{background:#ef4444}.dot.y{background:#f59e0b}.dot.g{background:#22c55e}
+    .device .grid { padding: 16px; display: grid; grid-template-columns: 220px 1fr; gap: 14px; }
+    .side .item { height: 34px; border-radius: 10px; background: #e9ecf7; margin-bottom: 10px; }
+    .main .hero-img { height: 140px; border-radius: 14px; background: linear-gradient(135deg, rgba(14,165,233,.35), rgba(99,102,241,.25)); border: 1px solid var(--line); }
+    .main .row { height: 16px; border-radius: 8px; background: #e9ecf7; margin-top: 10px; }
+
+    /* Collections */
+    .section { padding: 24px 0 40px; margin: 15px;}
+    .section-head { display: flex; align-items: center; justify-content: space-between; margin: 26px 15px 14px; }
+    .section-head h2 { margin: 0; font-size: 22px; }
+    .products { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: grid; grid-template-rows: auto 1fr auto; }
+    .thumb { aspect-ratio: 1/1; background: linear-gradient(135deg, rgba(14,165,233,.22), rgba(99,102,241,.18)); position: relative; }
+    .chip { position: absolute; top: 10px; left: 10px; background: #0f172a; color: #fff; font-size: 12px; padding: 6px 8px; border-radius: 999px; opacity: .9; }
+    .meta { padding: 14px; }
+    .title { font-weight: 700; }
+    .muted { color: var(--muted); font-size: 14px; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 1px; }
+    .price { font-weight: 800; margin-top: 6px; }
+    .actions { padding: 12px 14px 16px; display: flex; gap: 8px; }
+    .add { flex: 1; border: 0; border-radius: 10px; padding: 10px 12px; font-weight: 700; cursor: pointer; background: var(--brand); color: var(--brand-ink); }
+    .wish { width: 44px; border-radius: 10px; border: 1px solid var(--line); background: #fff; font-size: 18px; }
+
+    /* Banner row */
+    .row { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; margin-top: 18px; }
+    .promo { border-radius: var(--radius); border: 1px solid var(--line); background: linear-gradient(135deg, rgba(14,165,233,.18), rgba(16,185,129,.15)); padding: 18px; box-shadow: var(--shadow); }
+    .promo h3 { margin: 0 0 6px; }
+    .promo p { margin: 0; color: var(--muted); }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--line); background: #fff; margin-top: 36px; padding-top: 20px; }
+    .foot { display: grid; grid-template-columns: 1.2fr .8fr .8fr .8fr; gap: 16px; color: var(--muted); }
+    .foot h4 { margin: 0 0 10px; color: var(--ink); }
+    .input { display: flex; gap: 8px; }
+    .input input { flex: 1; padding: 12px 12px; border-radius: 10px; border: 1px solid var(--line); }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .banner { grid-template-columns: 1fr; }
+      .products { grid-template-columns: repeat(2, 1fr); }
+      .row { grid-template-columns: 1fr; }
+      .foot { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .header .inner { grid-template-columns: 1fr auto; }
+      .nav { display: none; }
+      .products { grid-template-columns: 1fr; }
+      .foot { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Announcement -->
+  <div class="announce">Free shipping on all orders — Demo text</div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container inner">
+      <div class="brand"><span class="badge"></span>Your Brand</div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#">New</a>
+        <a href="#">Best Sellers</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="tools">
+        <button class="btn-icon" aria-label="Search">Search</button>
+        <button class="btn-icon" aria-label="Cart">Cart (0)</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero banner -->
+  <section class="container" style="margin-top:28px;">
+    <div class="banner">
+      <div class="copy">
+        <div class="kicker">Your Business Here</div>
+        <h1>Build A Portfolio or E-Commerce Site for Your Business</h1>
+        <p class="lead">All copy is placeholder. Work with us to create a unique look for your brand.</p>
+        <div style="display:flex; gap:10px; margin-top:14px;">
+          <button class="btn">Shop Now</button>
+          <button class="btn" style="background:#111827; box-shadow: 0 8px 20px rgba(17,24,39,.18);">Learn More</button>
+        </div>
+      </div>
+      <div class="art">
+        <div class="device">
+          <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+          <div class="grid">
+            <div class="side">
+              <div class="item"></div>
+              <div class="item" style="width:80%"></div>
+              <div class="item" style="width:60%"></div>
+              <div class="item" style="width:90%"></div>
+              <div class="item" style="width:70%"></div>
+            </div>
+            <div class="main">
+              <div class="hero-img"></div>
+              <div class="row" style="height:14px"></div>
+              <div class="row" style="height:14px; width:70%"></div>
+              <div class="row" style="height:14px; width:90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured products -->
+  <section class="container section">
+    <div class="section-head">
+      <h2>Featured Products</h2>
+      <a href="#">View All</a>
+    </div>
+    <div class="products">
+      <article class="card">
+        <div class="thumb"><span class="chip">New</span></div>
+        <div class="meta">
+          <div class="title">Product Name</div>
+          <div class="muted">Very nice placeholder item</div>
+          <div class="stars">★★★★★ <span class="muted" aria-hidden="true">(123)</span></div>
+          <div class="price">$99</div>
+        </div>
+        <div class="actions">
+          <button class="add">Add to Cart</button>
+          <button class="wish" title="Save">♡</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="title">Another Product</div>
+          <div class="muted">Generic short description</div>
+          <div class="stars">★★★★☆ <span class="muted">(87)</span></div>
+          <div class="price">$129</div>
+        </div>
+        <div class="actions">
+          <button class="add">Add to Cart</button>
+          <button class="wish">♡</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"><span class="chip">Sale</span></div>
+        <div class="meta">
+          <div class="title">Placeholder Tee</div>
+          <div class="muted">100% imaginary cotton</div>
+          <div class="stars">★★★★★ <span class="muted">(204)</span></div>
+          <div class="price">$39</div>
+        </div>
+        <div class="actions">
+          <button class="add">Add to Cart</button>
+          <button class="wish">♡</button>
+        </div>
+      </article>
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="meta">
+          <div class="title">Demo Sneakers</div>
+          <div class="muted">Your brand</div>
+          <div class="stars">★★★★☆ <span class="muted">(59)</span></div>
+          <div class="price">$149</div>
+        </div>
+        <div class="actions">
+          <button class="add">Add to Cart</button>
+          <button class="wish">♡</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="row">
+      <div class="promo">
+        <h3>Seasonal Feature</h3>
+        <p>Use this block to highlight a collection or discount.</p>
+      </div>
+      <div class="promo" style="background: linear-gradient(135deg, rgba(99,102,241,.18), rgba(14,165,233,.15));">
+        <h3>Bundle & Save</h3>
+        <p>Add other custom elements designed for your brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container foot">
+      <div>
+        <h4>Your Brand</h4>
+        <p>E-commerce or portfolio placeholder.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <p><a href="#">All Products</a><br><a href="#">Collections</a><br><a href="#">Gift Cards</a></p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <p><a href="#">About</a><br><a href="#">Careers</a><br><a href="#">Contact</a></p>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <div class="input"><input placeholder="Enter your email"/><button class="btn" style="padding: 10px 12px">Sign Up</button></div>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+
+        window.addEventListener('message', (event) => {
+            // If not same-origin, you can relax this check to a specific allowed origin string.
+            if (event.origin !== window.location.origin) return;
+
+            const data = event.data || {};
+            if (data.type === 'scrollDelta' && typeof data.dy === 'number') {
+            const target = window.scrollY + data.dy;
+            // Use 'auto' to avoid fighting with frequent deltas; it's smoother than 'smooth' in this pattern
+            window.scrollTo({ top: target, behavior: 'auto' });
+            }
+        });
+    </script>
+
+
+</body>
+</html>

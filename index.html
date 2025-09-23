@@ -1,101 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miles Berman - Portfolio</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="assets/stylesheets/reset.css">
-    <link rel="stylesheet" href="assets/stylesheets/layout.css">
-    <link rel="stylesheet" href="assets/stylesheets/animations.css">
-    <!-- favicon -->
-    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/src//styles/global.css" />
+  <link rel="stylesheet" href="/src//styles/components.css" />
+  <link rel="stylesheet" href="/src//styles/home.css" />
+  <title>Miles Berman - Developer Services</title>
 </head>
-
 <body>
-    <div class="body-container">
-        <nav class="row even">
-            <h1><a href="/">mberman.dev</a></h1>
-            
-            <ul class="row right" style="gap: 20px;">
-                <li><a class="text-link" href="/info/">Info</a></li>
-                <li><a class="text-link" href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
+  <header>
+    <a href="/"><h1>Miles Berman</h1></a>
+    <nav>
+      <a href="/work.html">Work</a>
+      <a href="/about">About</a>
+      <a href="/contact" class="cta">Get a Quote</a>
+    </nav>
+  </header>
 
-    <header class="row even">
-        <div>
-            <h1 data-animate>Miles</h1>
-            <h1 data-animate>Berman</h1>
-            <h2 data-animate>Web Developer & Programmer</h2>
-        </div>
-        <div class="header-pfp" data-animate>
-            <img src="assets/profile.png" alt="Miles Berman">
-        </div>
-    </header>
-    <div class="row even"  style="background-color: rgb(226, 236, 245);">
-        <!-- email -->
-        <a class="text-link" href="mailto:contact@mberman.dev">contact@mberman.dev</a>
-        <div class="row right">
-            <a href="https://github.com/miles-berman" target="_blank" rel="noopener noreferrer">
-                <img class="icon" src="../assets/icons/github.png" alt="Icon">
-            </a>
-            <a href="https://www.linkedin.com/in/milesberman/" target="_blank" rel="noopener noreferrer">
-                <img class="icon" src="../assets/icons/linkedin.png" alt="Icon">
-            </a>
-        </div>
+  <section class="hero">
+    <div>
+      <h2>Web & Developer Services </h2>
+      <p>Design-first, performance-obsessed web development. Fast, accessible, and effective websites that convert.</p>
+      <a href="#contact" class="btn primary">Start a Project</a>
+      <a href="#work" class="btn">See Work</a>
     </div>
+    <div>
+      <!-- <img src="/assets/hero1.png" alt="Mockup" /> -->
+        <iframe 
+          id="shopFrame" 
+          src="/demo-site.html">
+        </iframe>
 
-    <section class="box">
-        <div class="content-box project" data-animate>
-            <h1>Coming Soon:</h1>
-            <div class="column left">
-                <h3>Cars Reimagined - RESTOMODS</h3>
-                <h4>Available October 14, 2025</h4>
-            </div>
-            <div class="row center">
-                <img class="image medium"
-                    src="https://www.accartbooks.com/app/uploads/books/9781788843379-04-1-600x684.jpg" 
-                    alt="Cars Reimagined - RESTOMODS"
-                >
-                <div>
-                    <p style="text-indent: 1em;">
-                        In collaboration with author Bill Schwartz, 
-                        Cars Reimagined is an exciting project celebrating handcrafted restomods.
-                        Featuring builds from names such as Singer, Eagle, Tuthill, and Alfaholics,
-                    </p>
-                </div>
-            </div>  
-        </div>  
-    </section>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Miles Berman</p>
-    </footer>
+  <section aria-label="Clients" class="clients">
+    <div class="container">
+      <div>
+        <span class="eyebrow">Trusted by teams at</span>
+          <ul class="logo-row" role="list">
+          <li><img src="/assets/logos/Burgeon.png" alt="Burgeon" /></li>
+          <li><img src="/assets/logos/PharmaDinners.jpg" alt="PharmaDinners" /></li>
+          <li><img src="/assets/logos/Goods for You.jpg" alt="Goods for You" /></li>
+          <li><img src="/assets/logos/ACC Art Books.JPG" alt="ACC Art Books" /></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Add class after first render so transition triggers
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
+  <section id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <h3 id="services-heading">Services</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>Web & E-Commerce</h4>
+          <ul class="box-list">
+            <li>Shopify, Stripe (Frontend & Backend)</li>
+            <li>In-House Solutions (Custom Development)</li>
+            <li>Business Automation (Mail, Shipping)</li>
+          </ul>
+          <p>Solutions for a wide variety of web needs, from e-commerce to custom applications & simple static sites.</p>
+        </article>
+
+        <article class="card">
+          <h4>Tailored Software</h4>
+          <p>Code specifically designed to meet your needs.</p>
+          <ul class="box-list">
+            <li>Custom Scripts & Tools (Python, JavaScript)</li>
+            <li>Data Organization & Reporting</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h4>Hardware Solutions</h4>
+          <ul class="box-list">
+            <li>NAS & Backups</li>
+            <li>AV, Networking & Smart Home Systems</li>
+          </ul>
+           <p>IT Infrastructure & Support for the home and office.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+  <section id="testimonials" aria-labelledby="testimonials-heading" class="testimonials">
+    <div class="container">
+      <h3 id="testimonials-heading">What clients say</h3>
+      <div class="quotes">
+        <figure class="quote">
+        <blockquote>“I’m so glad I appointed you as the sole Digital Asset Manager for my premium coffee table book; CARS REIMAGINED: Restomods. I owe you a very sincere thank you for keeping me on schedule and within the budget.”</blockquote>
+        <figcaption>— Bill S., Owner & CEO</figcaption>
+        </figure>
+        <figure class="quote">
+        <blockquote>“Clean code, great UX instincts, and proactive communication. Couldn’t ask for more.”</blockquote>
+        <figcaption>— Anita R., Product Lead</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech stack / capabilities -->
+  <section id="stack" aria-labelledby="stack-heading" class="stack">
+    <div class="container">
+      <h3 id="stack-heading">Skills</h3>
+      <ul class="pill-list" role="list">
+        <li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Shopify</li><li>Webflow</li><li>TrueNAS</li><li>SEO</li><li>E-Commerce</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Numbers / quick proof -->
+  <section class="stats" aria-label="Impact Stats">
+    <div class="container stat-grid">
+      <div class="stat"><div class="num">92+</div><div class="label">Lighthouse</div></div>
+      <div class="stat"><div class="num"><span aria-hidden="true">↑</span>34%</div><div class="label">Conversion lift</div></div>
+      <div class="stat"><div class="num"><span aria-hidden="true">↓</span>47%</div><div class="label">Bounce reduction</div></div>
+      <div class="stat"><div class="num"><span aria-hidden="true">≤</span>1s</div><div class="label">Time to interactive</div></div>
+    </div>
+  </section>
+
+  <section class="examples" id="work" aria-labelledby="work-heading">
+    <div class="container">
+      <h3 id="work-heading">Recent Work</h3>
+        <article class="card">
+          <img src="/assets/work/cars-reimagined.pdf" alt="Cars Reimagined website screenshot" />
+          <h4>Cars Reimagined</h4>
+          <p>Showcasing a collection of custom car builds and restorations.</p>
+          <p>Available 14th Oct 2025</p>
+          <!-- purchase button -->
+          <a href="https://www.accartbooks.com/us/book/restomods/" class="btn">More Info</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Miles. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Scale factor: how much of the parent's scroll delta to apply to the iframe
+    const SCALE = 1.2;
+
+    const iframe = document.getElementById('shopFrame');
+
+    // Track last scroll position to compute delta
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      const currentY = window.scrollY;
+      const delta = currentY - lastY; // positive = scrolling down; negative = up
+      lastY = currentY;
+
+      // rAF throttle for smoother messaging
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          try {
+            // Send only the delta; child will scrollBy this amount
+            iframe.contentWindow.postMessage(
+              { type: 'scrollDelta', dy: delta * SCALE },
+              window.location.origin // same-origin recommended
+            );
+          } catch (e) {
+            // ignore if iframe not ready yet
+          }
+          ticking = false;
         });
+      }
+    }, { passive: true });
+  </script>
 
-        // Intersection Observer
-        document.addEventListener('DOMContentLoaded', () => {
-            const els = document.querySelectorAll('*');
 
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    io.unobserve(entry.target); // remove if we want it to re-trigger
-                }
-                });
-            }, {
-                threshold: 0.1 // trigger when 10% visible
-            });
 
-            els.forEach(el => io.observe(el));
-        });
-    </script>
 </body>
 </html>
