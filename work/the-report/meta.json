@@ -1,0 +1,21 @@
+{
+  "title": "The Report",
+  "summary": " An exploration rogue lite mapping game - Uncover the city's secrets through mini-games - Sell your map quickly and efficiently to purchase upgrades. Developed at UCSC with fellow students.",
+  "tags": ["games"],
+  "date": "2023-07-11",
+
+  "size": "small",
+  "links": {
+    "live": "https://finndepuy.github.io/The-Report/",
+    "repo": null
+  },
+
+  "images": [
+    { "src": "hero.png", "alt": "Game banner" }
+  ],
+
+  "files": [
+
+    ]
+
+}

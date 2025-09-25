@@ -17,7 +17,6 @@
 
   margin-bottom: 32px;       /* Masonry uses this as gutter */
   break-inside: avoid;       /* fallback for CSS columns */
-  transition: all 0.3s ease; /* optional smoothness */
 }
 
 /* --- Size variations --- */
@@ -45,27 +44,22 @@
 /* Ensure hidden projects are actually gone */
 .project[hidden] { display: none !important; }
 
-/* --- Hero (image area) --- */
-.hero-slider {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;      /* default aspect */
-  background: var(--color-alt-bg);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.masonry-sizer { width: 100%; }
+.project       { width: 100%; margin-bottom: 32px; }  /* vertical gutter */
+
+/* --- Breakpoints --- */
+/* 2 columns */
+@media (min-width: 700px) {
+  .masonry-sizer,
+  .project { width: 48%; } /* leaves room for gutter set in JS */
 }
 
-/* Optional: portrait feel for tall cards */
-.project.tall .hero-slider {
-  aspect-ratio: 3 / 4;
+/* 3 columns */
+@media (min-width: 1024px) {
+  .masonry-sizer,
+  .project { width: 31.333%; } /* ~100/3 */
 }
 
-/* Optional: square-ish for small cards */
-.project.small .hero-slider {
-  aspect-ratio: 1 / 1;
-}
 
 /* --- Slider track --- */
 .slider-track {

@@ -1,13 +1,13 @@
 {
   "title": "POCKET DRUMS",
-  "summary": "Designed ",
+  "summary": "Visual wrapper for a Web Audio API algorithmic music generator build for a game project, with some added functionality.",
   "tags": ["web", "software"],
   "date": "2024-02-20",
 
-  "size": "tall",
+  "size": "",
   "links": {
-    "live": "https://goodsforyoushop.com",
-    "repo": null
+    "live": "https://mbermanucsc.github.io/Pocket-Drums/",
+    "repo": "https://github.com/mbermanUCSC/Pocket-Drums"
   },
 
   "images": [
