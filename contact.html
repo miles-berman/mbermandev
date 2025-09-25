@@ -24,12 +24,17 @@
     </section>
 
     <section id="contact" class="contact container reveal">
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="fb4df110-0765-47e3-bdf2-413c9752bcfa" />
+            <!-- <input type="hidden" name="redirect" value="https://yoursite.com/thank-you" /> -->
+            <!-- Honeypot (bots will fill this) -->
+            <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" style="display:none"/>
+
             <div 
             style="margin-bottom: 50px;">
                 <p>All emails are sent securely through Web3Forms to <a href="mailto:contact@mberman.dev">contact@mberman.dev</a>. Feel free to email me directly, or by using the form below.</p>
             </div>
+
             <div class="field">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required />
@@ -42,12 +47,34 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="6" maxlength="2500" required></textarea>
             </div>
+            <div class="h-captcha" data-captcha="true"></div>
             <button type="submit" class="btn primary">Send Message</button>
         </form>
     </section>
-    
+
     <site-footer></site-footer>
     <!-- Global behaviors -->
-  <script type="module" src="/src/js/app.js"></script>
+    <script type="module" src="/src/js/app.js"></script>
+
+    <!-- Web3Forms script (enable capcha) -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <!-- Web3Forms script (enforce capcha) -->
+    <script>
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', function(e) {
+
+            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+            if (!hCaptcha) {
+                e.preventDefault();
+                alert("Please fill out captcha field")
+                return
+            }
+        });
+    </script>
+
+
+  
 </body>
 </html>

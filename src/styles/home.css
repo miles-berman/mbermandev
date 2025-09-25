@@ -21,6 +21,8 @@
     border: 0;
     height: 1200px;
     width: 100%;
+    border-radius: var(--radius-content);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,.3);
 }
 
 
@@ -32,9 +34,8 @@
 /* Testimonials */
 .testimonials .quotes { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; }
 .quote { padding: 16px; }
-.quote blockquote { margin: 0 0 8px; }
+.quote blockquote { margin: 0 0 8px; font-size: var(--font-size-bigtext); color: var(--color-subhead); }
 .quote figcaption { color: var(--color-subhead)}
-
 
 /* Stats */
 .stats { background: #0f172a; color: #e5e7eb; }
@@ -46,5 +47,9 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-    
+    .hero { grid-template-columns: 1fr; text-align: center; padding: 32px 16px; gap: 16px; }
+    .hero iframe {
+        width: 90%; /* side padding */
+        margin: 0 auto;
+    }
 }

@@ -8,9 +8,15 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/src/styles/global.css"/>
   <link rel="stylesheet" href="/src/styles/components.css"/>
+  <link rel="stylesheet" href="/src/styles/work.css"/>
 
   <!-- Components -->
   <script type="module" src="/src/js/components.js"></script>
+
+  <!-- SEO -->
+  <meta name="description" content="A showcase of recent projects and collaborations by Miles Berman across web, e-commerce, audio, and tailored software."/>
+  <meta property="og:title" content="Miles Berman — Work"/>
+  <meta property="og:description" content="Selected projects across web, e-commerce, audio, and tailored software."/>
 </head>
 <body>
   <site-header></site-header>
@@ -20,9 +26,23 @@
       <div class="container">
         <h1>My Work</h1>
         <p class="subhead">A showcase of my recent projects and collaborations.</p>
-        <!-- Add your project grid/sections here -->
       </div>
     </section>
+
+    <!-- Filters -->
+    <section id="filter" aria-label="Project filters" class="work-filters reveal">
+      <div class="container">
+        <div class="filters" role="tablist" aria-label="Filter projects by category">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="web" role="tab">Web</button>
+          <button class="filter" data-filter="ecommerce" role="tab">E-Commerce</button>
+          <button class="filter" data-filter="software" role="tab">Software</button>
+          <button class="filter" data-filter="audio" role="tab">Audio</button>
+          <button class="filter" data-filter="it" role="tab">IT / Infra</button>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <site-footer></site-footer>

@@ -76,6 +76,7 @@ p {
 
   --font-size-heading: 4.5rem;
   --font-size-subhead: 3.25rem;
+  --font-size-bigtext: 1.25rem;
   --font-size-body: 1.1rem;
 
   --color-bg: #fff;
@@ -84,7 +85,8 @@ p {
   --color-header: #3e3e3e;
   --color-subhead: #555;
   --color-text: #2d2d2d;
-  --color-button: #00529b;
+  --color-button: #2563eb;
+  --color-button-active: #1e40af;
   --color-button-text: #fff;
   --color-frame: #ddddddb3;
 }

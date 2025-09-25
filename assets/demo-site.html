@@ -105,6 +105,106 @@
     }
   </style>
 </head>
+
+<script>
+(() => {
+  const SPEED = 18; // px per second (try 10–16 for a very smooth ambient pace)
+
+  function start() {
+    // Build a viewport and a tape that will be translated
+    const viewport = document.createElement('div');
+    const tape = document.createElement('div');
+
+    // Move all current body children into the tape
+    while (document.body.firstChild) {
+      tape.appendChild(document.body.firstChild);
+    }
+
+    // Styles (GPU-friendly + universal)
+    Object.assign(viewport.style, {
+      position: 'fixed',
+      inset: '0',
+      overflow: 'hidden',
+      background: getComputedStyle(document.body).background || '#fff',
+      zIndex: '0'
+    });
+    Object.assign(tape.style, {
+      position: 'absolute',
+      left: '0',
+      top: '0',
+      width: '100%',
+      willChange: 'transform'
+    });
+
+    viewport.appendChild(tape);
+    document.body.appendChild(viewport);
+
+    // Duplicate content once for seamless loop
+    const clone = tape.cloneNode(true);
+    // only keep children in clone (avoid nesting viewport again)
+    while (clone.firstChild) clone.removeChild(clone.firstChild);
+    for (const node of Array.from(tape.childNodes)) {
+      clone.appendChild(node.cloneNode(true));
+    }
+    viewport.appendChild(clone);
+
+    // Stack original then clone
+    const measure = () => {
+      tape.style.transform = 'translate3d(0,0,0)';
+      clone.style.transform = 'translate3d(0,0,0)';
+      // Force layout, then place clone under original
+      const h = tape.getBoundingClientRect().height;
+      clone.style.top = h + 'px';
+      return h;
+    };
+
+    let contentHeight = 0;
+    let y = 0;
+    let last = performance.now();
+    let rafId;
+
+    const recompute = () => {
+      contentHeight = measure();
+    };
+
+    const tick = (now) => {
+      const dt = Math.min(0.12, (now - last) / 1000);
+      last = now;
+
+      if (contentHeight > 0) {
+        y = (y + SPEED * dt) % contentHeight;
+        const ty = -y;
+        // Move both stacks together; modulo makes it seamless
+        tape.style.transform  = `translate3d(0, ${ty}px, 0)`;
+        clone.style.transform = `translate3d(0, ${ty}px, 0)`;
+      }
+
+      rafId = requestAnimationFrame(tick);
+    };
+
+    // Initial measure and kick
+    recompute();
+    requestAnimationFrame(tick);
+
+    // Keep things correct on resize / orientation changes / fonts loading
+    addEventListener('resize', recompute);
+    addEventListener('orientationchange', recompute);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(recompute).catch(() => {});
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) cancelAnimationFrame(rafId);
+      else { last = performance.now(); rafId = requestAnimationFrame(tick); }
+    });
+  }
+
+  if (document.readyState === 'complete') start();
+  else addEventListener('load', start, { once: true });
+})();
+</script>
+
+
 <body>
   <!-- Announcement -->
   <div class="announce">Free shipping on all orders — Demo text</div>

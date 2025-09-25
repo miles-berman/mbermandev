@@ -16,14 +16,15 @@ headerTpl.innerHTML = `
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.appendChild(headerTpl.content.cloneNode(true));
+    this.highlightActiveLink("nav a");
+  }
 
-    // highlight current page link
+  highlightActiveLink(selector) {
     const path = window.location.pathname.replace(/\/+$/, ""); // normalize
-    this.querySelectorAll("nav a").forEach(a => {
+    this.querySelectorAll(selector).forEach(a => {
       const href = a.getAttribute("href").replace(/\/+$/, "");
       if (href === path) {
-        a.style.textDecoration = "underline";
-        a.style.textUnderlineOffset = "4px";
+        a.classList.add("active");
       }
     });
   }
@@ -35,6 +36,12 @@ const footerTpl = document.createElement('template');
 footerTpl.innerHTML = `
   <footer>
     © <span id="year"></span> Miles Berman. All rights reserved.
+    <ul>
+        <li><a href="/">Home</a></li>
+      <li><a href="/work.html">Work</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html" class="cta">Contact</a></li>
+    </ul>
   </footer>
 `;
 
@@ -42,6 +49,17 @@ class SiteFooter extends HTMLElement {
   connectedCallback() {
     this.appendChild(footerTpl.content.cloneNode(true));
     this.querySelector('#year').textContent = new Date().getFullYear();
+    this.highlightActiveLink("ul a");
+  }
+
+  highlightActiveLink(selector) {
+    const path = window.location.pathname.replace(/\/+$/, ""); // normalize
+    this.querySelectorAll(selector).forEach(a => {
+      const href = a.getAttribute("href").replace(/\/+$/, "");
+      if (href === path) {
+        a.classList.add("active");
+      }
+    });
   }
 }
 customElements.define('site-footer', SiteFooter);
