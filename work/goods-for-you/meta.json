@@ -1,0 +1,21 @@
+{
+  "title": "GOODS FOR YOU",
+  "summary": "Worked alongside the team to create ",
+  "tags": ["web", "ecommerce"],
+  "date": "2025-02-20",
+
+  "size": "",
+  "links": {
+    "live": "https://goodsforyoushop.com",
+    "repo": null
+  },
+
+  "images": [
+    { "src": "hero.png", "alt": "Site preview" }
+  ],
+
+  "files": [
+
+    ]
+
+}

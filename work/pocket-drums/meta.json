@@ -1,0 +1,21 @@
+{
+  "title": "POCKET DRUMS",
+  "summary": "Designed ",
+  "tags": ["web", "software"],
+  "date": "2024-02-20",
+
+  "size": "tall",
+  "links": {
+    "live": "https://goodsforyoushop.com",
+    "repo": null
+  },
+
+  "images": [
+    { "src": "hero.png", "alt": "Site preview" }
+  ],
+
+  "files": [
+
+    ]
+
+}
