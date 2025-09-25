@@ -29,9 +29,8 @@ header a {
     text-decoration: none;
 }
 nav a {
-  margin-left: 16px;
+  margin-left: var(--margin-menu);
   color: var(--color-text);
-  font-weight: 500;
 }
 nav a.cta {
   background: var(--color-button);
@@ -48,14 +47,10 @@ footer {
   font-size: 0.9rem;
 }
 
-footer p {
-  margin: 0; /* reset default <p> margin */
-}
 
 footer ul {
   list-style: none;
-  margin: 8px 0 0;  /* just a little space below © text */
-  padding: 0;
+  margin: var(--margin-menu) 0 0;  /* just a little space below © text */
   display: flex;
   justify-content: center;
   gap: 24px;
@@ -65,6 +60,7 @@ footer a {
   text-decoration: none;
   color: var(--color-text, #000);
 }
+
 
 nav a.active,
 footer a.active {
@@ -99,7 +95,9 @@ footer a.active {
 }
 
 section { padding: 48px 32px; }
-section h3 { font-size: 2rem; margin-bottom: 24px; }
+
+
+section h3 { font-size: 2rem; margin-bottom: var(--margin-header);}
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 16px; }
 .card {
     padding: 16px;
@@ -108,14 +106,13 @@ section h3 { font-size: 2rem; margin-bottom: 24px; }
 }
 .card p {
     color: var(--color-subhead);
-    margin: 10px;
+    margin: var(--margin-subhead)
 }
 .card h4 {
-    /* font-weight: bold; */
-    margin: 0 0 8px;
+    margin: 0 0 var(--margin-subhead);
 }
 .card img {
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 }
 
 

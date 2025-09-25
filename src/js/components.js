@@ -41,6 +41,7 @@ footerTpl.innerHTML = `
       <li><a href="/work.html">Work</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/contact.html" class="cta">Contact</a></li>
+      <li><a href="/privacy.html">Privacy</a></li>
     </ul>
   </footer>
 `;
