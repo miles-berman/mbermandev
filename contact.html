@@ -1,56 +1,61 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Miles Berman - Contact</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Miles Berman - Contact</title>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/src/styles/global.css"/>
-  <link rel="stylesheet" href="/src/styles/components.css"/>
-  <link rel="stylesheet" href="/src/styles/contact.css"/>
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/styles/global.css"/>
+    <link rel="stylesheet" href="/src/styles/components.css"/>
+    <link rel="stylesheet" href="/src/styles/contact.css"/>
 
-  <!-- Components -->
-  <script type="module" src="/src/js/components.js"></script>
+    <!-- Components -->
+    <script type="module" src="/src/js/components.js"></script>
+
+    <!-- SEO -->
+    <meta name="description" content=""/>
+    <meta property="og:title" content="Miles Berman — Contact"/>
+    <meta property="og:description" content="Contact Miles Berman."/>
 </head>
 <body>
     <site-header></site-header>
 
-    <section class="">      
-        <div class="container">
-            <h1>Let's talk about your project</h1>
-            <p class="subhead">Whether you need a brand-new site, custom integrations, or ongoing support — let’s connect.</p>
-        </div>
-    </section>
-
-    <section id="contact" class="contact container reveal">
-        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="fb4df110-0765-47e3-bdf2-413c9752bcfa" />
-            <!-- <input type="hidden" name="redirect" value="https://yoursite.com/thank-you" /> -->
-            <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" style="display:none"/>
-
-            <h4>All emails are sent securely through Web3Forms to <a href="mailto:contact@mberman.dev">contact@mberman.dev</a>. Feel free to email me directly, or by using the form below.</h4>
-            
-            <div class="field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
+    <main>
+        <section>      
+            <div class="container">
+                <h1>Let's talk about your project</h1>
+                <p class="subhead">Whether you need a brand-new site, custom integrations, or ongoing support — let’s connect.</p>
             </div>
-            <div class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-            </div>
-            <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6" maxlength="2500" required></textarea>
-            </div>
-            <div class="h-captcha" data-captcha="true"></div>
-            <button type="submit" class="btn primary">Send Message</button>
-        </form>
-    </section>
+        </section>
 
-    <site-footer></site-footer>
-    <!-- Global behaviors -->
-    <script type="module" src="/src/js/app.js"></script>
+        <section id="contact" class="contact reveal">
+            <div class="container">
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="fb4df110-0765-47e3-bdf2-413c9752bcfa" />
+                    <!-- <input type="hidden" name="redirect" value="https://yoursite.com/thank-you" /> -->
+                    <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" style="display:none"/>
+
+                    <h4>All emails are sent securely through Web3Forms to <a href="mailto:contact@mberman.dev">contact@mberman.dev</a>. Feel free to email me directly, or by using the form below.</h4>
+                    
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required />
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" maxlength="2500" required></textarea>
+                    </div>
+                    <div class="h-captcha" data-captcha="true"></div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Web3Forms script (enable capcha) -->
     <script src="https://web3forms.com/client/script.js" async defer></script>
@@ -70,7 +75,9 @@
         });
     </script>
 
-
+    <!-- Footer -->
+    <site-footer></site-footer>
+    <script type="module" src="/src/js/app.js"></script>
   
 </body>
 </html>

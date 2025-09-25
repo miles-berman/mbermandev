@@ -1,3 +1,7 @@
+/* * {
+  border: 1px solid black;
+} */
+
 body {
     background: #fff;
     line-height: 1.5;
@@ -163,24 +167,9 @@ ul.box-list li:last-child {
 
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
  /* Pill List */
-.pill-list { display:flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
-.pill-list li { border:var(--frame-size) solid var(--color-frame); padding:.4rem .6rem; border-radius: 999px; background:#fff; }
-
-.filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-.filters .filter {
-    appearance: none;
-    border: var(--frame-size, 1px) solid var(--color-frame, #e5e7eb);
-    background: transparent;
-    padding: 8px 12px;
-    border-radius: 999px;
-    cursor: pointer;
-    font: inherit;
-}
-.filters .filter.active {
+.pill-list { display:flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none;}
+.pill-list li, .pill-list button { border:var(--frame-size) solid var(--color-frame); padding:8px 12px; border-radius: 999px; background: var(--color-bg); }
+.pill-list button.active {
     background: var(--color-button);
     color: var(--color-button-text);
     border-color: var(--color-button-active);

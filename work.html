@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,6 +20,7 @@
   <meta property="og:description" content="Selected projects across web, e-commerce, audio, and tailored software."/>
 </head>
 <body>
+  <!-- Header -->
   <site-header></site-header>
 
   <main>
@@ -29,23 +31,30 @@
       </div>
     </section>
 
-    <!-- Filters -->
-    <section id="filter" aria-label="Project filters" class="work-filters reveal">
+    <!-- Filters (tabs) -->
+    <div class="container">
+      <div class="pill-list" role="tablist" aria-label="Filter projects by category">
+        <button class="filter active" data-filter="all" role="tab" aria-selected="true" aria-controls="project-grid">All</button>
+        <button class="filter" data-filter="web" role="tab" aria-controls="project-grid">Web</button>
+        <button class="filter" data-filter="ecommerce" role="tab" aria-controls="project-grid">E-Commerce</button>
+        <button class="filter" data-filter="software" role="tab" aria-controls="project-grid">Software</button>
+      </div>
+    </div>
+
+    <!-- Projects grid -->
+    <section id="projects" class="projects reveal" aria-labelledby="projects-heading">
       <div class="container">
-        <div class="filters" role="tablist" aria-label="Filter projects by category">
-          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="filter" data-filter="web" role="tab">Web</button>
-          <button class="filter" data-filter="ecommerce" role="tab">E-Commerce</button>
-          <button class="filter" data-filter="software" role="tab">Software</button>
+        <div id="project-grid" class="project-grid" role="tabpanel" aria-live="polite">
         </div>
+        <!-- empty-state -->
+        <p id="no-results" hidden>No projects match this filter.</p>
       </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
   <site-footer></site-footer>
-
-  <!-- Global behaviors -->
   <script type="module" src="/src/js/app.js"></script>
 </body>
 </html>
