@@ -1,5 +1,5 @@
 /* ---------------------------
-   Reset + Base (with your tokens)
+Reset + Base (with your tokens)
 ---------------------------- */
 
 /* 1) Reset basics */
@@ -20,19 +20,6 @@ button {
 /* Media elements */
 img, picture, video, canvas, svg { display: block; max-width: 100%; }
 svg { overflow: visible; }
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-/* Dark */
-@media (prefers-color-scheme: dark) {
-}
 
 /* Font & Sizes */
 h1 {
@@ -58,7 +45,7 @@ a {
 
 
 /* ---------------------------
-   Your tokens (unchanged)
+Your tokens (unchanged)
 ---------------------------- */
 
 :root {
@@ -121,4 +108,18 @@ a {
   --color-button: #00529b;
   --color-button-text: #fff;
   --color-frame: #eee;
+}
+
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+}
+/* Dark */
+@media (prefers-color-scheme: dark) {
 }

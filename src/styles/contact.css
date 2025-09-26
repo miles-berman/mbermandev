@@ -25,14 +25,14 @@
 
 .contact input,
 .contact textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: var(--frame-size) solid var(--color-frame);
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    /* disable resizing */
-    resize: none;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: var(--frame-size) solid var(--color-frame);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  /* disable resizing */
+  resize: none;
 }
 
 .contact input:focus,
