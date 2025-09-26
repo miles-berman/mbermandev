@@ -26,11 +26,6 @@
   width: 48%;   /* roughly 2 across in Masonry */
 }
 
-/* Tall card: same width, taller naturally */
-.project.tall {
-  width: 48%;   /* same width as normal */
-}
-
 /* Small card: narrower */
 .project.small {
   width: 30%;   /* ~3 across */
@@ -93,7 +88,6 @@
 /* --- Responsive normalization --- */
 @media (max-width: 640px) {
   .project,
-  .project.tall,
   .project.small,
   .project.wide {
     width: 100% !important; /* stack full width on mobile */

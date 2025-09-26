@@ -132,7 +132,7 @@ async function loadProjectSafely(item) {
       summary: meta.summary || '',
       tags: (meta.tags || []).map(t => String(t).toLowerCase()),
       date: meta.date || '',
-      size: meta.size || null,              // "small" | "wide" | "tall" (optional)
+      size: meta.size || null,              // "small" | "wide" (optional)
       links: meta.links || {},
       images: Array.isArray(meta.images) ? meta.images : [],
       files: Array.isArray(meta.files) ? meta.files : []
