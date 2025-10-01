@@ -1,6 +1,6 @@
 {
   "title": "The Report",
-  "summary": " This collaborative Phaser JS game explores how perspective shapes experiences, built around the theme “Nearby in space, but distant in time.” In The Report, players uncover clues and shift the narrative through a unique perspective mechanic, gradually filling out a journal as they play. Developed at UCSC with fellow students, contributed to the game design and created all audio and music for the project.",
+  "summary": "This collaborative Phaser JS game explores how perspective shapes experiences, built around the theme “Nearby in space, but distant in time.” In The Report, players uncover clues and shift the narrative through a unique perspective mechanic, gradually filling out a journal as they play. Developed at UCSC with fellow students, contributed to the game design and created all audio and music for the project.",
   "tags": ["games"],
   "date": "2023-07-11",
 
@@ -11,7 +11,7 @@
   },
 
   "images": [
-    { "src": "hero.png", "alt": "Game banner" }
+    { "src": "hero.png", "alt": "Site banner" }
   ],
 
   "files": [
