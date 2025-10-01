@@ -1,6 +1,6 @@
 # Miles Berman — Portfolio
 
-This repository contains the code and resources for my personal portfolio website, built to showcase my projects and services in **web development, e-commerce, audio technology, and tailored software solutions**.
+This repository contains the code and resources for my personal portfolio website, built to showcase my projects and services in **web development, e-commerce, IT, and tailored software solutions**.
 
 ## Overview
 
