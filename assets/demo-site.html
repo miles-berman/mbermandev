@@ -109,6 +109,11 @@
 <script>
 (() => {
   const SPEED = 18; // px per second (try 10–16 for a very smooth ambient pace)
+  
+  // Bail out early if reduced motion is enabled
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return;
+  }
 
   function start() {
     // Build a viewport and a tape that will be translated

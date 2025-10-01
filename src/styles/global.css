@@ -18,7 +18,7 @@ button {
 }
 
 /* Media elements */
-img, picture, video, canvas, svg { display: block; max-width: 100%; }
+img, picture, video, canvas, svg { display: block; max-width: 100%; -webkit-user-drag: none; user-select: none; }
 svg { overflow: visible; }
 
 /* Font & Sizes */
@@ -51,8 +51,9 @@ Your tokens (unchanged)
 :root {
   /* look */
   --frame-size: 2px;
+
   --radius-content: 0.2rem;
-  --radius-field: 5px;
+  --radius-field: 12px;
   --radius-button: 5px;
 
   --gap-content: 1.5rem; /* consider renaming to --gap-content */
@@ -77,9 +78,9 @@ Your tokens (unchanged)
   --color-subhead: #555;
   --color-text: #2d2d2d;
   --color-button: #2563eb;
+  --color-button-alt: #ffffff;
   --color-button-active: #1e40af;
-  --color-button-text: #fff;
-  --color-frame: #ddddddb3;
+  --color-frame: #dddddd7b;
 
   --margin-header: 24px;
   --margin-menu: 16px;

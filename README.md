@@ -1,27 +1,33 @@
-# Miles Berman - Portfolio
+# Miles Berman — Portfolio
 
-Welcome to the repository for my personal portfolio website. Here, you'll find the code and resources for my website where I showcase my projects in game design, programming, art, and music production.
+This repository contains the code and resources for my personal portfolio website, built to showcase my projects and services in **web development, e-commerce, audio technology, and tailored software solutions**.
 
 ## Overview
 
-The portfolio is a reflection of my work and skills, app programming, game development, music, and more. The site is built to host my work and share it with those interested!
+The portfolio is designed as both a showcase and a resource hub:  
+- **About** → Background and skills  
+- **Work** → Selected projects and collaborations  
+- **Contact** → Ways to connect and collaborate  
+- **Privacy** → Transparency on hosting, data handling, and security  
 
 ## Structure
 
-The repository is structured as follows:
+- **`index.html`** → Homepage (Developer Services overview)  
+- **`src/`** → Stylesheets, JavaScript components, and app logic  
+- **`work/`** → Project entries, case studies, and resources  
+- **`assets/`** → Images and other static resources  
 
-- `index.html`: The main entry point of the website.
-- `assets/`: Contains the stylesheet, images, and other static assets used across the site.
-- `portfolio/`: Contains info for each project with resources and some downloadables.
+## Technology
 
-## Contact
-
-For collaboration or inquiries, feel free to reach out via email at mileshb16@gmail.com or check out my [GitHub](https://github.com/miles-berman).
+- **Hosting**: GitHub Pages (served through **Cloudflare** for security and performance)  
+- **Packages**:  
+  - [Masonry](https://masonry.desandro.com/) — responsive grid layouts  
+  - [imagesLoaded](https://imagesloaded.desandro.com/) — ensures layouts adjust after images load  
 
 ## Acknowledgments
 
-This portfolio is hosted using GitHub Pages.
+This portfolio is powered by **GitHub Pages**, with **Cloudflare** providing hosting and security.  
 
 ---
 
-© 2024 Miles Berman. All rights reserved.
+© 2025 Miles Berman. All rights reserved.

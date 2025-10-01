@@ -6,9 +6,9 @@ headerTpl.innerHTML = `
   <header>
     <a href="/"><img src="/assets/logo.png" alt="Miles Berman Logo" style="height: 40px;"/></a>
     <nav>
-      <a href="/work.html">Work</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html" class="cta">Contact</a>
+      <a href="/work">Work</a>
+      <a href="/about">About</a>
+      <a href="/contact" class="btn primary">Contact</a>
     </nav>
   </header>
 `;
@@ -38,10 +38,10 @@ footerTpl.innerHTML = `
     © <span id="year"></span> Miles Berman. All rights reserved.
     <ul>
         <li><a href="/">Home</a></li>
-      <li><a href="/work.html">Work</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html" class="cta">Contact</a></li>
-      <li><a href="/privacy.html">Privacy</a></li>
+      <li><a href="/work">Work</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact" class="cta">Contact</a></li>
+      <li><a href="/privacy">Privacy</a></li>
     </ul>
   </footer>
 `;

@@ -8,14 +8,13 @@
 /* --- Project card --- */
 .project {
   border: 1px solid var(--color-frame);
-  border-radius: 12px;
+  border-radius: var(--radius-field);
   overflow: hidden;          /* clip rounded corners */
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   background: var(--color-bg);
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 32px;       /* Masonry uses this as gutter */
   break-inside: avoid;       /* fallback for CSS columns */
 }
 
@@ -39,20 +38,19 @@
 /* Ensure hidden projects are actually gone */
 .project[hidden] { display: none !important; }
 
-.masonry-sizer { width: 100%; }
-.project       { width: 100%; margin-bottom: 32px; }  /* vertical gutter */
+.masonry-sizer,
+.project {
+  width: 31.333%; /* ~100/3 */
+}
+.project       { margin-bottom: 32px; }  /* vertical gutter */
 
 /* --- Breakpoints --- */
-/* 2 columns */
-@media (min-width: 700px) {
+/* 2 columns on mobile (up to 640px wide, adjust if you like) */
+@media (max-width: 900px) {
   .masonry-sizer,
-  .project { width: 48%; } /* leaves room for gutter set in JS */
-}
-
-/* 3 columns */
-@media (min-width: 1024px) {
-  .masonry-sizer,
-  .project { width: 31.333%; } /* ~100/3 */
+  .project {
+    width: 48%; /* ~100/2 */
+  }
 }
 
 
@@ -175,7 +173,3 @@
   opacity: 0.8;
 }
 
-/* --- Motion preferences --- */
-@media (prefers-reduced-motion: reduce) {
-  .slider-track { transition: none; }
-}

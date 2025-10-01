@@ -36,12 +36,24 @@ nav a {
   margin-left: var(--margin-menu);
   color: var(--color-text);
 }
-nav a.cta {
-  background: var(--color-button);
-  color: var(--color-button-text);
-  padding: 8px 12px;
-  border-radius: 6px;
+
+nav a,
+footer a {
+  display: inline-block;
+  transition: transform .2s ease;
 }
+nav a:hover,
+footer a:hover {
+  transform: translateY(-1px);
+
+}
+
+nav a.active,
+footer a.active {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 
 
 footer {
@@ -63,13 +75,6 @@ footer a {
 }
 
 
-nav a.active,
-footer a.active {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-
 
 /* Buttons */
 .btn {
@@ -77,15 +82,19 @@ footer a.active {
   padding: 10px 16px;
   border-radius: 6px;
   border: var(--frame-size) solid var(--color-button);
-  background: #fff;
+  background: var(--color-button-alt);
   color: var(--color-button);
   font-weight: bold;
   text-decoration: none;
 }
 .btn.primary {
   background: var(--color-button);
-  color: #fff;
+  color: var(--color-button-alt);
   border: none;
+}
+
+li .btn {
+  padding: 2px 6px;
 }
 
 /* Images */
@@ -146,14 +155,17 @@ ul.box-list li:last-child {
   border-bottom: none;    /* Remove last divider */
 }
 
+.box-list ul {
+  padding-left: 32px;
+}
+
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 /* Pill List */
 .pill-list { display:flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none;}
 .pill-list li, .pill-list button { border:var(--frame-size) solid var(--color-frame); padding:8px 12px; border-radius: 999px; background: var(--color-bg); }
 .pill-list button.active {
   background: var(--color-button);
-  color: var(--color-button-text);
-  border-color: var(--color-button-active);
+  color: var(--color-button-alt);
 }
 
 

@@ -4,21 +4,49 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Miles Berman - Work</title>
+  <title>Work & Projects | Miles Berman</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/src/styles/global.css"/>
   <link rel="stylesheet" href="/src/styles/components.css"/>
-  <link rel="stylesheet" href="/src/styles/work.css"/>
+  <link rel="stylesheet" href="/work/work.css"/>
 
   <!-- Components -->
   <script type="module" src="/src/js/components.js"></script>
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mberman.dev/work.html"/>
+
   <!-- SEO -->
-  <meta name="description" content="A showcase of recent projects and collaborations by Miles Berman across web, e-commerce, audio, and tailored software."/>
-  <meta property="og:title" content="Miles Berman — Work"/>
-  <meta property="og:description" content="Selected projects across web, e-commerce, audio, and tailored software."/>
+  <meta name="description" content="Explore selected projects and collaborations by Miles Berman: web development, e-commerce platforms, audio technology, and tailored software solutions."/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Work & Projects | Miles Berman"/>
+  <meta property="og:description" content="Explore selected projects and collaborations by Miles Berman: web development, e-commerce platforms, audio technology, and tailored software solutions."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="mberman.dev"/>
+  <meta property="og:image" content="https://mberman.dev/assets/preview.png"/>
+  <meta property="og:image:alt" content="Miles Berman — portfolio and services"/>
+  <meta property="og:url" content="https://mberman.dev/work.html"/>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Work & Projects",
+    "url": "https://mberman.dev/work.html",
+    "description": "A showcase of selected projects and collaborations by Miles Berman across web development, e-commerce, audio technology, and tailored software solutions.",
+    "author": {
+      "@type": "Person",
+      "name": "Miles Berman",
+      "url": "https://mberman.dev"
+    }
+  }
+  </script>
 </head>
+
+
 <body>
   <!-- Header -->
   <site-header></site-header>
@@ -43,7 +71,7 @@
     </div>
 
     <!-- Projects grid -->
-    <section id="projects" class="projects reveal" aria-labelledby="projects-heading">
+    <section id="projects" class="projects" aria-labelledby="projects-heading">
       <div class="container">
         <div id="project-grid" class="project-grid" role="tabpanel" aria-live="polite">
           <!-- * PROJECTS LOADED HERE * -->
@@ -56,7 +84,7 @@
 
   <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script type="module" src="/src/js/work.js"></script>
+  <script type="module" src="/work/work.js"></script>
 
   <!-- Footer -->
   <site-footer></site-footer>

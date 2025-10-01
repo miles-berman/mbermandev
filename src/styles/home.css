@@ -38,11 +38,20 @@
 .quote figcaption { color: var(--color-subhead)}
 
 /* Stats */
-.stats { background: #0f172a; color: #e5e7eb; }
+.stats { background: #0f172a; color: var(--color-button-alt); }
 .stat-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 16px; }
 .stat { border:6px solid rgba(255,255,255,.12); border-radius: 8px; padding: 18px; text-align:center; }
 .stat .num { font-size: clamp(1.6rem, 4vw, 2rem); font-weight: 700; }
-.stat .label { color: #cbd5e1; margin-top: 4px; }
+.stat .label { margin-top: 4px; }
+
+
+.services { background: #0f172a; color: var(--color-button-alt); }
+.services h3, .services h4, .services p {
+    color: var(--color-button-alt);
+}
+.services .card{
+    border: none;
+}
 
 
 /* Mobile */

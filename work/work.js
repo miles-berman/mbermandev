@@ -2,7 +2,7 @@
 
 /**
  * Portfolio grid + slider + Masonry layout
- * - Renders project cards from /work/index.json
+ * - Renders project cards from /projects/index.json
  * - Wires image sliders with autoplay + hover pause
  * - Filters by tag
  * - Lays out with Masonry after images load
@@ -81,7 +81,7 @@ async function main() {
     return;
   }
 
-  const slugs = await fetchJSON('/work/index.json'); // [{slug}]
+  const slugs = await fetchJSON('/projects/index.json'); // [{slug}]
   if (!Array.isArray(slugs)) throw new Error('index.json must be an array');
 
   const projects = (await Promise.all(slugs.map(loadProjectSafely))).filter(Boolean);
@@ -121,7 +121,7 @@ async function main() {
 async function loadProjectSafely(item) {
   try {
     if (!item || !item.slug) return null;
-    const base = `/work/${item.slug}`;
+    const base = `/projects/${item.slug}`;
     const meta = await fetchJSON(`${base}/meta.json`);
     if (!meta || !meta.title) return null;
 
@@ -176,7 +176,7 @@ function renderProjectCard(p) {
     : '';
 
   return `
-  <article class="project${sizeClass}" data-tags="${escapeHtml(tagAttr)}">
+  <article class="project ${sizeClass}" data-tags="${escapeHtml(tagAttr)}">
     <div class="project-hero">
       <div class="hero-slider">
         <div class="slider-track">

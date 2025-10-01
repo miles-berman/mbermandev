@@ -12,7 +12,7 @@
 
   "images": [
     { "src": "hero.jpg",         "alt": "RESTOMODS cover" },
-    { "src": "gallery/cars-reimagined.pdf",   "alt": "RESTOMODS preview" }
+    { "src": "gallery/content.png",   "alt": "RESTOMODS preview" }
   ],
 
   "files": [
