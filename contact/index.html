@@ -63,9 +63,13 @@
 
         <section id="contact" class="contact reveal">
             <div class="container">
-                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <form 
+                id="contactForm" 
+                action="https://api.web3forms.com/submit" 
+                method="POST"
+                >
                     <input type="hidden" name="access_key" value="fb4df110-0765-47e3-bdf2-413c9752bcfa" />
-                    <!-- <input type="hidden" name="redirect" value="https://yoursite.com/thank-you" /> -->
+                    <input type="hidden" name="redirect" value="https://mberman.dev/contact/#thank-you" />
                     <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" style="display:none"/>
 
                     <h4>All emails are sent securely through Web3Forms to <a href="mailto:contact@mberman.dev">contact@mberman.dev</a>. Feel free to email me directly, or by using the form below.</h4>
@@ -86,7 +90,12 @@
                     <button type="submit" class="btn primary">Send Message</button>
                 </form>
             </div>
+
+            <div id="thank-you" style="display:none;">
+                <h3>Thanks! Your message has been sent</h3>
+            </div>
         </section>
+
     </main>
 
     <!-- Web3Forms script (enable capcha) -->
@@ -103,6 +112,13 @@
                 return
             }
         });
+    </script>
+    <script>
+        // When the page loads, check if redirected with #thank-you
+        if (window.location.hash === "#thank-you") {
+            document.getElementById("thank-you").style.display = "block";
+            document.getElementById("contactForm").style.display = "none"; // optional: hide form
+        }
     </script>
 
     <!-- Footer -->
