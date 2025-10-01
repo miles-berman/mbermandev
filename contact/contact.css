@@ -2,10 +2,8 @@
 /* Contact Section */
 .contact {
   max-width: 600px;
-  margin: var(--margin-menu) auto;
-  padding: 2rem;
-  border-radius: 1rem;
-  border: var(--frame-size) solid var(--color-frame);
+  margin: 20px auto;
+  padding: 1rem;
 }
 
 /* Form Fields */
