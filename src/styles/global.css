@@ -1,0 +1,126 @@
+/* ---------------------------
+Reset + Base (with your tokens)
+---------------------------- */
+
+/* 1) Reset basics */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-body);
+}
+
+/* Buttons and inputs*/
+button, input, select, textarea { font: inherit; color: inherit; }
+button {
+  cursor: pointer;
+}
+
+/* Media elements */
+img, picture, video, canvas, svg { display: block; max-width: 100%; -webkit-user-drag: none; user-select: none; }
+svg { overflow: visible; }
+
+/* Font & Sizes */
+h1 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  color: var(--color-header);
+}
+h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-subhead);
+  color: var(--color-subhead);
+}
+
+p {
+  color: var(--color-text);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+}
+
+a {
+  color: var(--color-text);
+}
+
+
+/* ---------------------------
+Your tokens (unchanged)
+---------------------------- */
+
+:root {
+  /* look */
+  --frame-size: 2px;
+
+  --radius-content: 0.2rem;
+  --radius-field: 12px;
+  --radius-button: 5px;
+
+  --gap-content: 1.5rem; /* consider renaming to --gap-content */
+
+  /* typography */
+  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-weight-heading: 500;
+  --font-weight-subhead: 500;
+  --font-weight-body: 400;
+
+  --font-size-heading: 4.5rem;
+  --font-size-subhead: 3.25rem;
+  --font-size-bigtext: 1.25rem;
+  --font-size-body: 1.1rem;
+
+  --color-bg: #fff;
+  --color-content-bg: rgba(250, 250, 250, 0.96);
+  --color-alt-bg: rgba(244, 244, 244, 0.743);
+  --color-header: #3e3e3e;
+  --color-subhead: #555;
+  --color-text: #2d2d2d;
+  --color-button: #2563eb;
+  --color-button-alt: #ffffff;
+  --color-button-active: #1e40af;
+  --color-frame: #dddddd7b;
+
+  --margin-header: 24px;
+  --margin-menu: 16px;
+  --margin-subhead: 8px;
+}
+
+/* COLOR THEMES */
+.color-theme--dark,
+[data-theme="dark"] {
+  --color-bg: #111;
+  --color-content-bg: rgba(0,0,0,0.774);
+  --color-header: #fff;
+  --color-subhead: #aaa;
+  --color-text: #ccc;
+  --color-button: #333;
+  --color-button-text: #fff;
+  --color-frame: #444;
+}
+.color-theme--light,
+[data-theme="light"] {
+  --color-bg: #fff;
+  --color-content-bg: #f9fafb;
+  --color-header: #202020;
+  --color-subhead: #555;
+  --color-text: #6d6d6d;
+  --color-button: #00529b;
+  --color-button-text: #fff;
+  --color-frame: #eee;
+}
+
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+}
+/* Dark */
+@media (prefers-color-scheme: dark) {
+}

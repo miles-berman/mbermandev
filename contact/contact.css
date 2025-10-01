@@ -1,0 +1,40 @@
+
+/* Contact Section */
+.contact {
+  max-width: 600px;
+  margin: var(--margin-menu) auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: var(--frame-size) solid var(--color-frame);
+}
+
+/* Form Fields */
+.contact .field {
+  margin-bottom: var(--margin-header)
+}
+
+.contact h4 {
+  margin-bottom: var(--margin-header);
+}
+.contact label {
+  display: block;
+  margin-bottom: var(--margin-subhead);
+  font-weight: 600;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: var(--frame-size) solid var(--color-frame);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  /* disable resizing */
+  resize: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  box-shadow: 0 0 0 3px var(--color-button);
+}

@@ -1,0 +1,22 @@
+{
+  "title": "CARS REIMAGINED: Restomods",
+  "summary": "Publishing this October, Bill Schwartz’s The New World Order of Handcrafted Cars celebrates the restomod movement. As Digital Asset Coordinator, custom software was built to manage and organize materials from leading brands including Singer, Eagle, Tuthill, and Alfaholics. Available in bookstores, Amazon, and more.",
+  "tags": [], 
+  "date": "2025-10-15",
+
+  "size": "",
+  "links": {
+    "live": "https://www.accartbooks.com/us/book/restomods/",
+    "repo": null
+  },
+
+  "images": [
+    { "src": "hero.jpg",         "alt": "RESTOMODS cover" },
+    { "src": "gallery/content.png",   "alt": "RESTOMODS preview" }
+  ],
+
+  "files": [
+
+    ]
+
+}

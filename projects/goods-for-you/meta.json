@@ -1,0 +1,21 @@
+{
+  "title": "GOODS FOR YOU",
+  "summary": "Based in Malibu, GOODS FOR YOU offers premium organic, vegan, and natural wellness goodies. A custom Shopify site was developed in collaboration with the team to bring their aesthetic online. Available now through their e-commerce storefront.",
+  "tags": ["web", "ecommerce"],
+  "date": "2025-02-20",
+
+  "size": "",
+  "links": {
+    "live": "https://goodsforyoushop.com",
+    "repo": null
+  },
+
+  "images": [
+    { "src": "hero.png", "alt": "Site preview" }
+  ],
+
+  "files": [
+
+    ]
+
+}
