@@ -33,7 +33,7 @@
 
 /* Testimonials */
 .testimonials .quotes { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; }
-.quote { padding: 16px; }
+.quote { padding: 16px; font-style: italic; }
 .quote blockquote { margin: 0 0 8px; font-size: var(--font-size-bigtext); color: var(--color-subhead); }
 .quote figcaption { color: var(--color-subhead)}
 
