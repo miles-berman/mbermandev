@@ -1,0 +1,22 @@
+{
+  "title": "GOODY BOXX™",
+  "summary": "Personalized favors and curated candy mixes, GOODY BOXX™",
+  "tags": ["web", "ecommerce"],
+  "date": "2025-10-20",
+
+  "size": "",
+  "links": {
+    "live": "https://goodyboxx.com",
+    "repo": null
+  },
+
+  "images": [
+    { "src": "hero.png", "alt": "GOODY BOXX™ Hero" },
+    { "src": "gallery/product.png",   "alt": "GOODY BOXX preview" }
+  ],
+
+  "files": [
+
+    ]
+
+}

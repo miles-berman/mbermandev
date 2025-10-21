@@ -58,36 +58,50 @@
       <p>
         Solutions for individuals & businesses, specializing in e-commerce and custom software.
       </p>
-      <a href="/contact" class="btn primary">Start a Project</a>
-      <a href="/work" class="btn">See Work</a>
+      <a href="#projects" class="btn">See Work</a>
+      <a href="/contact" class="btn primary">Contact</a>
     </div>
     <div>
-      <!-- <img src="/assets/hero1.png" alt="Mockup" /> -->
+      <img style="max-width: 100px;" src="/assets/profile.png"></img>
+      <ul class="box-list">
+        <li>Murrieta, CA</li>
+        <li>UC Santa Cruz 2024 - Bachelor of Science, BS; Computer Science: Computer Game Design</li>
+        <li>
+          Currently Employed At
+          <ul>
+            <li>Pharma Dinners - Contract Senior Web Engineer</li>
+            <li>Freelance Development - Various Current Projects <a class="btn" href="/#projects">view</a></li>
+            <li>William A. Schwartz, Inc.; Global Licensing, Merchandising & Branding - Digital Asset Coordinator</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- <div>
         <iframe 
           id="shopFrame" 
           scrolling="no"
           src="assets/demo-site.html">
         </iframe>
-    </div>
+    </div> -->
   </section>
 
-  <section aria-label="Clients" class="clients reveal">
+  <section aria-label="Clients" class="clients">
       <div>
         <span class="eyebrow">Trusted by teams at</span>
-          <ul class="logo-row" role="list">
-          <li><img src="/assets/logos/Burgeon.png" alt="Burgeon" /></li>
-          <li><img src="/assets/logos/PharmaDinners.jpg" alt="PharmaDinners" /></li>
-          <li><img src="/assets/logos/Goods for You.jpg" alt="Goods for You" /></li>
-          <li><img src="/assets/logos/Goody Boxx.png" alt="Goody Boxx" /></li>
+          <ul class="logo-row reveal" role="list">
+            <li><img src="/assets/logos/Burgeon.png" alt="Burgeon" /></li>
+            <li><img src="/assets/logos/PharmaDinners.jpg" alt="PharmaDinners" /></li>
+            <li><img src="/assets/logos/Goods for You.jpg" alt="Goods for You" /></li>
+            <li><img src="/assets/logos/Goody Boxx.png" alt="Goody Boxx" /></li>
         </ul>
       </div>
   </section>
 
-  <section id="services" aria-labelledby="services-heading" class="services reveal">
+  <section id="services" aria-labelledby="services-heading" class="services">
     <div class="container">
       <h3 id="services-heading">Services</h3>
-      <div class="cards">
 
+      <div class="cards reveal">
         <article class="card">
           <h4>Tailored Software</h4>
           <ul class="box-list">
@@ -117,17 +131,17 @@
           </ul>
            <p>IT infrastructure for both the home and office.</p>
         </article>
-
       </div>
+
     </div>
   </section>
 
 
   <!-- Testimonials -->
-  <section id="testimonials" aria-labelledby="testimonials-heading" class="testimonials reveal">
+  <section id="testimonials" aria-labelledby="testimonials-heading" class="testimonials">
     <div class="container">
-      <h3 id="testimonials-heading">What clients say</h3>
-      <div class="quotes">
+      <h3 id="testimonials-heading">What Clients Say</h3>
+      <div class="quotes reveal">
         <figure class="quote">
         <blockquote>“I’m so glad I appointed you as the sole Digital Asset Manager for my premium coffee table book; CARS REIMAGINED: Restomods. I owe you a very sincere thank you for keeping me on schedule and within the budget.”</blockquote>
         <figcaption>— Bill S., Author & Owner (William A. Schwartz, Inc.; Global Licensing, Merchandising & Branding)</figcaption>
@@ -140,42 +154,34 @@
     </div>
   </section>
 
-  <!-- Tech stack / capabilities -->
-  <section id="stack" aria-labelledby="stack-heading" class="stack reveal">
+  <!-- Work -->
+  <section id="projects" class="projects" style="padding: 18px 12px;" aria-labelledby="projects-heading">
     <div class="container">
-      <h3 id="stack-heading">Skills</h3>
-      <ul class="pill-list" role="list">
-        <li>Shopify</li><li>E-Commerce</li><li>Webflow</li><li>Hosting</li>
-        <li>Python</li><li>C/C++</li><li>C#</li><li>Unity</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Audio Programming Frameworks</li>
-        <li>Airtable</li><li>Git</li><li>Linux</li><li>PyTorch/TensorFlow</li><li>TrueNAS</li><li>Docker</li>
-      </ul>
-    </div>
-  </section>
+      <h3 id="prjects-heading">My Work</h3>
 
-  <!-- About -->
-  <section id="about" aria-label="About" class="about reveal">
-      <div class="container">
-        <div class="card">
-            <img style="max-width: 200px;" src="/assets/profile.png"></img>
-            <ul class="box-list">
-              <li>Murrieta, CA</li>
-              <li>UC Santa Cruz 2024 - Bachelor of Science, BS; Computer Science: Computer Game Design</li>
-              <li>
-                Currently Employed At
-                <ul>
-                  <li>Pharma Dinners - Contract Senior Web Engineer</li>
-                  <li>Freelance Development - Various Current Projects <a class="btn" href="/work/">view</a></li>
-                  <li>William A. Schwartz, Inc.; Global Licensing, Merchandising & Branding - Digital Asset Coordinator and Developer</li>
-                </ul>
-              </li>
-            </ul>
-        </div>
+       <!-- Filters (tabs) -->
+      <div class="pill-list" role="tablist" aria-label="Filter projects by category">
+        <button class="filter active" data-filter="all" role="tab" aria-selected="true" aria-controls="project-grid">All</button>
+        <button class="filter" data-filter="ecommerce" role="tab" aria-controls="project-grid">E-Commerce</button>
+        <button class="filter" data-filter="software" role="tab" aria-controls="project-grid">Software</button>
+        <button class="filter" data-filter="web" role="tab" aria-controls="project-grid">Web</button>
+        <button class="filter" data-filter="games" role="tab" aria-controls="project-grid">Games</button>
       </div>
-  </section>
+      <!-- Projects grid -->
+      <section id="projects" class="projects reveal" aria-labelledby="projects-heading">
+        <div class="container">
+          <div id="project-grid" class="project-grid" role="tabpanel" aria-live="polite">
+            <!-- * PROJECTS LOADED HERE * -->
+          </div>
+        <p id="no-results" hidden>No projects match this filter.</p>
+        </div>
+      </section>
+    </section>
+  </div>
 
   <!-- Numbers / quick proof -->
-  <section ria-label="Impact Stats" class="stats reveal">
-    <div class="container stat-grid">
+  <section ria-label="Impact Stats" class="stats">
+    <div class="container stat-grid reveal">
       <div class="stat"><div class="num">8+</div><div class="label">Actively Maintained Sites</div></div>
       <div class="stat"><div class="num">↑3</div><div class="label">Years of Professional Experience</div></div>
       <div class="stat"><div class="num">E&O</div><div class="label">Covered by Professional Liability Insurance</div></div>
@@ -187,5 +193,9 @@
   <script type="module" src="/src/js/app.js"></script>
 
 
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script type="module" src="/src/js/work-panels.js"></script>
+  
 </body>
 </html>

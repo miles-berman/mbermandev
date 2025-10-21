@@ -1,40 +1,43 @@
 /* * {
 border: 1px solid black;
 } */
-
-body {
-  background: #fff;
-  line-height: 1.5;
-}
+/* debug: highlight anything wider than the viewport */
 
 /* Header & Navbar */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 10px 32px;
   position: sticky;
   top: 0;
+  width: 100%;
 
   border-bottom: 1px solid var(--color-frame);
   background: var(--color-content-bg);
 
   z-index: 1000;
 }
-header h1 {
-  font-size: 1.6rem;
-  font-weight: bold;
-}
-header a img {
-  min-height: 60px;
 
+header nav {
+  display: flex;
+  flex-wrap: nowrap; 
+  align-items: center;
 }
-header a {
-  text-decoration: none;
+@media (max-width: 900px) {
+  header {
+    padding: 10px 32px;
+  }
+  header a img {
+    min-height: 0px;
+  }
 }
-nav a {
-  margin-left: var(--margin-menu);
-  color: var(--color-text);
+footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid var(--color-frame);
+  font-size: 0.9rem;
+  background: var(--color-content-bg);
 }
 
 nav a,
@@ -47,21 +50,30 @@ footer a:hover {
   transform: translateY(-1px);
 
 }
-
 nav a.active,
 footer a.active {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
-
-
-
-footer {
-  text-align: center;
-  padding: 24px;
-  border-top: 1px solid #eee;
-  font-size: 0.9rem;
+header h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
 }
+header a img {
+  display: block;
+  height: auto;  
+  width: auto; 
+  max-height: 60px;
+}
+
+header a {
+  text-decoration: none;
+}
+nav a {
+  margin-left: var(--margin-menu);
+  color: var(--color-text);
+}
+
 footer ul {
   list-style: none;
   margin: var(--margin-menu) 0 0;  /* just a little space below © text */
@@ -71,10 +83,12 @@ footer ul {
 }
 footer a {
   text-decoration: none;
-  color: var(--color-text, #000);
+  color: var(--color-text);
 }
 
-
+section {
+  background: var(--color-bg);
+}
 
 /* Buttons */
 .btn {
@@ -115,7 +129,7 @@ section h3 { font-size: 2rem; margin-bottom: var(--margin-header);}
   border: var(--frame-size) solid var(--color-frame);
 }
 .card p {
-  color: var(--color-subhead);
+  color: var(--color-text);
   margin: var(--margin-subhead);
 }
 .card h4 {
@@ -126,16 +140,6 @@ section h3 { font-size: 2rem; margin-bottom: var(--margin-header);}
 }
 
 
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.4s ease, transform .8s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Lists */
 ul.box-list {
   list-style: none;
@@ -145,18 +149,17 @@ ul.box-list {
   padding: 12px;
 }
 
+.box-list ul {
+  padding-left: 32px;
+  text-align: left;
+}
 ul.box-list li {
   padding: 12px 0;        /* Add vertical spacing */
   border-bottom: 1px solid #ccc;  /* Divider line */
   font-size: 16px;        /* Adjust text size */
 }
-
 ul.box-list li:last-child {
   border-bottom: none;    /* Remove last divider */
-}
-
-.box-list ul {
-  padding-left: 32px;
 }
 
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
@@ -167,6 +170,167 @@ ul.box-list li:last-child {
   background: var(--color-button);
   color: var(--color-button-alt);
 }
+
+/* --- Grid (Masonry container) --- */
+.project-grid {
+  position: relative;        /* Masonry uses absolute positioning inside */
+  margin: 0 auto;            /* center the grid */
+  max-width: 2200px;         /* optional: constrain width */
+}
+
+/* --- Project card --- */
+.project {
+  border: 1px solid var(--color-frame);
+  border-radius: var(--radius-field);
+  overflow: hidden;          /* clip rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+
+  break-inside: avoid;       /* fallback for CSS columns */
+}
+
+/* --- Size variations --- */
+
+/* Default (normal card) */
+.masonry-sizer,
+.project {
+  width: 31.333%; /* ~100/3 */
+  margin-bottom: 15px;
+}
+
+/* .project.small {
+  width: 30%;
+}
+.project.wide {
+  width: 100%;
+} */
+
+/* Ensure hidden projects are actually gone */
+.project[hidden] { display: none !important; }
+
+
+
+/* --- Slider track --- */
+.project .slider-track {
+  display: flex;
+  transition: transform 0.45s ease;
+  height: 100%;
+  will-change: transform;
+}
+
+/* Each slide centers its image with padding */
+.project .slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* Always show full image (no crop) */
+.project .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* --- Responsive normalization --- */
+@media (max-width: 640px) {
+  .project,
+  .project.small,
+  .project.wide {
+    width: 100% !important; /* stack full width on mobile */
+  }
+
+  .project .hero-slider {
+    aspect-ratio: 16 / 9 !important; /* normalize ratios on small screens */
+  }
+}
+
+/* --- Slider nav (arrows + dots) --- */
+.project .slider-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  background: var(--color-content-bg);
+}
+
+.project .slider-arrow {
+  background: none;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--color-item);
+  line-height: 1;
+}
+.project .slider-arrow:hover { color: var(--color-button); }
+
+.project .slider-dots {
+  display: flex;
+  gap: 6px;
+}
+.project .slider-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-frame);
+  cursor: pointer;
+}
+.project .slider-dots button.active {
+  background: var(--color-button);
+}
+
+/* --- Description below hero --- */
+.project .project-description {
+  padding: 16px 20px;
+  background: var(--color-content-bg);
+}
+.project .project-links {
+  margin-bottom: 12px;
+}
+.project .project-links a {
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 0.9rem;
+}
+.project .project-description h2 {
+  margin: 0 0 .5rem;
+  font-size: 1.25rem;
+  color: var(--color-subhead);
+}
+.project .project-description p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.project .project-files {
+  margin: 10px 0;
+}
+.project .project-files a {
+  text-decoration: none;
+}
+
+/* --- Meta/date --- */
+.project .project-meta { margin-top: 10px; }
+.project .project-date {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  opacity: 0.8;
+}
+
+
 
 
 /* Mobile */

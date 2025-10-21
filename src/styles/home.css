@@ -9,8 +9,7 @@
     gap: 24px;
     padding: 48px 32px;
     align-items: center;
-    background: var(--color-inverse-bg);
-    background: var(--color-alt-bg);
+    background: var(--color-content-bg);
 }
 
 .hero h2 { margin: 0 0 12px; }
@@ -34,25 +33,24 @@
 /* Testimonials */
 .testimonials .quotes { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 16px; }
 .quote { padding: 16px; font-style: italic; }
-.quote blockquote { margin: 0 0 8px; font-size: var(--font-size-bigtext); color: var(--color-subhead); }
-.quote figcaption { color: var(--color-subhead)}
+.quote blockquote { margin: 0 0 8px; font-size: var(--font-size-bigtext); color: var(--color-text); }
+.quote figcaption { color: var(--color-text)}
 
 /* Stats */
-.stats { background: #0f172a; color: var(--color-button-alt); }
+.stats { background: var(--color-alt-bg); color: var(--color-button-alt); }
 .stat-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 16px; }
 .stat { border:6px solid rgba(255,255,255,.12); border-radius: 8px; padding: 18px; text-align:center; }
 .stat .num { font-size: clamp(1.6rem, 4vw, 2rem); font-weight: 700; }
 .stat .label { margin-top: 4px; }
 
 
-.services { background: #0f172a; color: var(--color-button-alt); }
+.services { background: var(--color-alt-bg); color: var(--color-button-alt); }
 .services h3, .services h4, .services p {
     color: var(--color-button-alt);
 }
 .services .card{
     border: none;
 }
-
 
 /* Mobile */
 @media (max-width: 768px) {

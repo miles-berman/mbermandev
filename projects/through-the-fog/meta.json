@@ -13,7 +13,7 @@
   "images": [
     { "src": "hero.jpg", "alt": "Game banner" },
     { "src": "gallery/game1.jpg", "alt": "Game scene 1" },
-    { "src": "gallery/game2.jpg", "alt": "Game scene 2" }
+    { "src": "gallery/steam.png", "alt": "Steam page" }
   ],
 
   "files": [

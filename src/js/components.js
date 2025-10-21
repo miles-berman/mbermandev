@@ -4,9 +4,9 @@
 const headerTpl = document.createElement('template');
 headerTpl.innerHTML = `
   <header>
-    <a href="/"><img src="/assets/logo.png" alt="Miles Berman Logo" style="height: 40px;"/></a>
+    <a href="/"><img src="/assets/logo.png" alt="Miles Berman Logo"/></a>
     <nav>
-      <a href="/work">Work</a>
+      <a href="/#projects">Work</a>
       <a href="/about">About</a>
       <a href="/contact" class="btn primary">Contact</a>
     </nav>
@@ -37,8 +37,8 @@ footerTpl.innerHTML = `
   <footer>
     © <span id="year"></span> Miles Berman. All rights reserved.
     <ul>
-        <li><a href="/">Home</a></li>
-      <li><a href="/work">Work</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/#projects">Work</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/contact" class="cta">Contact</a></li>
       <li><a href="/privacy">Privacy</a></li>

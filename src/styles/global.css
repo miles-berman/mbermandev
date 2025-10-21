@@ -2,14 +2,23 @@
 Reset + Base (with your tokens)
 ---------------------------- */
 
-/* 1) Reset basics */
-*, *::before, *::after { box-sizing: border-box; }
-* { margin: 0; padding: 0; }
-html, body { height: 100%; }
+/* Reset basics */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  background: var(--color-bg);
+}
 body {
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-body);
+  scroll-behavior: smooth;
+  line-height: 1.5;
 }
+
 
 /* Buttons and inputs*/
 button, input, select, textarea { font: inherit; color: inherit; }
@@ -73,14 +82,15 @@ Your tokens (unchanged)
 
   --color-bg: #fff;
   --color-content-bg: rgba(250, 250, 250, 0.96);
-  --color-alt-bg: rgba(244, 244, 244, 0.743);
+  --color-alt-bg: #0f172a;
   --color-header: #3e3e3e;
-  --color-subhead: #555;
+  --color-subhead: #494848;
   --color-text: #2d2d2d;
   --color-button: #2563eb;
   --color-button-alt: #ffffff;
   --color-button-active: #1e40af;
   --color-frame: #dddddd7b;
+  --color-item: #686868;
 
   --margin-header: 24px;
   --margin-menu: 16px;
@@ -111,6 +121,15 @@ Your tokens (unchanged)
   --color-frame: #eee;
 }
 
+.reveal {
+  opacity: 0 !important;
+  transform: translateY(20px);
+  transition: opacity 1.4s ease, transform .8s ease;
+}
+.reveal.visible {
+  opacity: revert !important;
+  transform: translateY(0);
+}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {

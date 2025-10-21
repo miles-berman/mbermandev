@@ -211,7 +211,7 @@ function renderSlide(base, img, fallbackAlt) {
   if (!src) {
     return `
       <div class="slide">
-        <div class="slide-fallback" aria-hidden="true" style="width:90%;height:90%;background:var(--color-alt-bg)"></div>
+        <div class="slide-fallback" aria-hidden="true" style="width:90%;height:90%;"></div>
       </div>
     `;
   }
@@ -246,72 +246,82 @@ function wireSlider(projectEl) {
   }
 
   let current = 0;
-  let timer   = null;
+  let timer = null;
   let idlePauseTimer = null;
+  let isHovering = false;
 
-  // Dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement('button');
-    dot.setAttribute('aria-label', `Show slide ${i + 1}`);
-    dot.addEventListener('click', () => { show(i); userInteracted(); });
-    dots.appendChild(dot);
-  });
+  // (Re)build dots
+  if (dots) {
+    dots.innerHTML = '';
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'slider-dot';
+      dot.setAttribute('aria-label', `Show slide ${i + 1}`);
+      dot.setAttribute('role', 'tab');
+      dot.addEventListener('click', () => { show(i); userInteracted(); });
+      dots.appendChild(dot);
+    });
+  }
 
   function show(i) {
     if (!slides.length) return;
     current = (i + slides.length) % slides.length;
     track.style.transform = `translateX(-${current * 100}%)`;
 
-    Array.from(dots.children).forEach((d, j) => {
-      const active = j === current;
-      d.classList.toggle('active', active);
-      d.setAttribute('aria-selected', String(active));
-    });
+    if (dots) {
+      Array.from(dots.children).forEach((d, j) => {
+        const active = j === current;
+        d.classList.toggle('active', active);
+        d.setAttribute('aria-selected', String(active));
+      });
+    }
 
-    // Mark active slide (useful if you switch to opacity-based transitions later)
     slides.forEach((s, j) => s.classList.toggle('active', j === current));
-
-    // Keep Masonry in sync if card height shifts
     relayoutMasonrySoon();
   }
 
   function start() {
-    if (RESPECTS_RM || document.hidden || slides.length <= 1) return;
+    if (RESPECTS_RM || document.hidden || slides.length <= 1 || isHovering) return;
     stop();
 
-    const phase = Math.random() * AUTOPLAY_MS;
-    current = Math.floor(Math.random() * slides.length);
-    show(current);
-
-    timer = setTimeout(function tick() {
+    timer = setInterval(() => {
       show(current + 1);
-      timer = setInterval(() => show(current + 1), AUTOPLAY_MS);
-    }, phase);
+    }, AUTOPLAY_MS);
   }
 
   function stop() {
-    if (timer) { clearTimeout(timer); clearInterval(timer); timer = null; }
+    clearInterval(timer);
+    timer = null;
   }
 
   function userInteracted() {
     stop();
-    if (idlePauseTimer) clearTimeout(idlePauseTimer);
+    clearTimeout(idlePauseTimer);
     idlePauseTimer = setTimeout(start, IDLE_PAUSE_MS);
   }
 
   // Mouse controls
+  // Mouse controls
   prev?.addEventListener('click', () => { show(current - 1); userInteracted(); });
   next?.addEventListener('click', () => { show(current + 1); userInteracted(); });
 
-  // Hover pause/resume
-  [hero, dots, prev, next].filter(Boolean).forEach(t => {
-    t.addEventListener('mouseenter', stop);
-    t.addEventListener('mouseleave', () => { if (!idlePauseTimer) start(); });
+  // Hover pause/resume (works on arrows, dots, and hero)
+  [hero, dots, prev, next].filter(Boolean).forEach(el => {
+    el.addEventListener('mouseenter', () => { 
+      isHovering = true; 
+      stop(); 
+    });
+    el.addEventListener('mouseleave', () => { 
+      isHovering = false; 
+      userInteracted(); 
+    });
   });
 
   // Tab visibility pause
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) stop(); else start();
+    if (document.hidden) stop(); 
+    else userInteracted();
   });
 
   // Init
