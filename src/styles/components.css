@@ -241,15 +241,27 @@ ul.box-list li:last-child {
 }
 
 /* --- Responsive normalization --- */
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  .masonry-sizer,
   .project,
   .project.small,
   .project.wide {
-    width: 100% !important; /* stack full width on mobile */
+
+    width: 47%;
   }
 
-  .project .hero-slider {
+  project .hero-slider {
     aspect-ratio: 16 / 9 !important; /* normalize ratios on small screens */
+  }
+}
+
+@media (max-width: 700px) {
+  .masonry-sizer,
+  .project,
+  .project.small,
+  .project.wide {
+
+    width: 100% !important;
   }
 }
 
