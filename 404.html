@@ -37,8 +37,27 @@
   </script>
 
   <style>
+    body {
+        display: grid;
+        grid-template-rows: auto 1fr auto; 
+        min-height: 100vh; 
+    }
+    main {
+        flex-grow: 1
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .err-msg {
+        display: flex;
+        flex-direction: column;
+        padding: 120px;
+        gap: 20px;
+
         text-align: center;
+        border: 1px dashed black;
     }
   </style>
 </head>
@@ -48,13 +67,16 @@
   <site-header></site-header>
 
   <!-- Simple hero section for the error message -->
-  <section>
-    <div class="err-msg">
-      <h2>404 – Page Not Found</h2>
-      <p>Sorry, the page you were looking for doesn’t exist.</p>
-      <a href="/" class="btn primary">Return Home</a>
-    </div>
-  </section>
+   <main>
+    <section class="header">
+        <div class="err-msg">
+            <h2>404 – Page Not Found</h2>
+            <p>mberman.dev</p>
+            <p>Sorry, the page you were looking for doesn’t exist.</p>
+            <a href="/" class="btn primary">Return Home</a>
+        </div>
+    </section>
+    </main>
 
   <!-- Re‑use the footer component -->
   <site-footer></site-footer>
