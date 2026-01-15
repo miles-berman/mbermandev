@@ -10,7 +10,7 @@ if ('IntersectionObserver' in window && reveals.length) {
         o.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.05 });
   reveals.forEach(el => obs.observe(el));
 }
 
