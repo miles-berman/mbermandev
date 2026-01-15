@@ -238,7 +238,7 @@ ul.box-list li:last-child {
   object-fit: contain;
   object-position: center;
   display: block;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 /* --- Step 1, 50 | 50 grid --- */
