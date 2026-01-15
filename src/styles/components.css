@@ -250,9 +250,10 @@ ul.box-list li:last-child {
     width: 47%;
   }
 
-  .project .hero-slider {
+  project .hero-slider {
     aspect-ratio: 16 / 9 !important; /* normalize ratios on small screens */
   }
+  
 }
 
 @media (max-width: 700px) {
@@ -262,6 +263,10 @@ ul.box-list li:last-child {
   .project.wide {
 
     width: 100% !important;
+  }
+
+  .project .slide {
+    padding: 6px;
   }
 }
 
