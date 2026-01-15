@@ -13,7 +13,7 @@ The portfolio is designed as both a showcase and a resource hub:
 ## Structure
 
 - **`index.html`** → Homepage (Developer Services overview)  
-- **`src/`** → Stylesheets, JavaScript components, and app logic  
+- **`assets/`** → Stylesheets, JavaScript components, and app logic  
 - **`work/`** → Project entries, case studies, and resources  
 - **`assets/`** → Images and other static resources  
 

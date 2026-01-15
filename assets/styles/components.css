@@ -227,7 +227,7 @@ ul.box-list li:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -240,7 +240,7 @@ ul.box-list li:last-child {
   display: block;
 }
 
-/* --- Responsive normalization --- */
+/* --- Step 1, 50 | 50 grid --- */
 @media (max-width: 900px) {
   .masonry-sizer,
   .project,
@@ -249,13 +249,9 @@ ul.box-list li:last-child {
 
     width: 47%;
   }
-
-  project .hero-slider {
-    aspect-ratio: 16 / 9 !important; /* normalize ratios on small screens */
-  }
   
 }
-
+/* --- Step 2, stacked --- */
 @media (max-width: 700px) {
   .masonry-sizer,
   .project,
@@ -263,10 +259,6 @@ ul.box-list li:last-child {
   .project.wide {
 
     width: 100% !important;
-  }
-
-  .project .slide {
-    padding: 6px;
   }
 }
 
