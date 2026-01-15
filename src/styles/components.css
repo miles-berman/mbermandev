@@ -250,7 +250,7 @@ ul.box-list li:last-child {
     width: 47%;
   }
 
-  project .hero-slider {
+  .project .hero-slider {
     aspect-ratio: 16 / 9 !important; /* normalize ratios on small screens */
   }
 }
