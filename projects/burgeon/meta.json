@@ -1,8 +1,8 @@
 {
   "title": "Burgeon",
-  "summary": "Burgeon develops 100% plant-based, science-backed formulas made with probiotics, active ingredients, and adaptogenic herbs to promote transformational hair health. I recently partnered with their team to create a new site, focusing on updating the brand's online presence.",
+  "summary": "Burgeon is an an expert-led hair wellness brand that develops 100% plant-based, science-backed products. Working closely with the team, I’ve had the great opportunity to help re-imagine their site over the past few months; working with the design team for the new layout, and the business and marketing team for affilliate programs, product subscriptions, and customer benefits.",
   "tags": ["web", "ecommerce"],
-  "date": "2025-09-18",
+  "date": "2025-11-23",
 
   "size": "",
   "links": {
@@ -11,7 +11,8 @@
   },
 
   "images": [
-    { "src": "hero.png", "alt": "Burgeon Hero" }
+    { "src": "hero.png", "alt": "Burgeon Hero" },
+    { "src": "gallery/PDP.png", "alt": "Burgeon Product Page" }
   ],
 
   "files": [

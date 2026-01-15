@@ -1,6 +1,6 @@
 {
   "title": "POCKET DRUMS",
-  "summary": "Visual wrapper for a Web Audio API algorithmic music generator build for a game project, with some added functionality.",
+  "summary": "Algorithmic music generator project, built on the Web Audio API. Served as a demo for an algorithmic music engine for Through The Fog, with some added functionality.",
   "tags": ["web", "software"],
   "date": "2024-02-18",
 

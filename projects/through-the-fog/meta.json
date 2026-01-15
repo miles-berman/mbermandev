@@ -1,6 +1,6 @@
 {
   "title": "Through the Fog",
-  "summary": " An exploration rogue lite mapping game - Uncover the city's secrets through mini-games - Sell your map quickly and efficiently to purchase upgrades. Developed at UCSC with fellow students.",
+  "summary": " An exploration rogue lite mapping game - Uncover the city's secrets through mini-games - Sell your map quickly and efficiently to purchase upgrades. Developed at UC Santa Cruz with fellow students, available on Steam!",
   "tags": ["games"],
   "date": "2024-06-14",
 
@@ -13,7 +13,7 @@
   "images": [
     { "src": "hero.jpg", "alt": "Game banner" },
     { "src": "gallery/game1.jpg", "alt": "Game scene 1" },
-    { "src": "gallery/steam.png", "alt": "Steam page" }
+    { "src": "gallery/steam.png", "alt": "Steam Page" }
   ],
 
   "files": [
